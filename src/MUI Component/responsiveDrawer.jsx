@@ -14,7 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { Grid } from '@mui/material';
-import logo from "../JAVASCRIPT1.png";
+import logo from "../JAVASCRIPT2.png";
 import Button from '@mui/material/Button';
 import NavigationMenu from "./navigationMenu";
 import { styled, alpha } from '@mui/material/styles';
@@ -73,7 +73,7 @@ const style = {
         letterSpacing: ".08rem"
     },
     logosubtext: {
-        color: "#0072E5",
+        color: "#55ac8f",
         fontWeight: 700,
         fontSize: "0.6875rem",
         textTransform: "uppercase",
@@ -124,6 +124,7 @@ function ResponsiveDrawer(props) {
                 sx={{
                     width: { sm: `calc(100% - ${drawerWidth}px)` },
                     ml: { sm: `${drawerWidth}px` },
+                    background:"#55ac8f"
                 }}
             >
                 <Toolbar>
