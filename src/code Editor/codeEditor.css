@@ -1,0 +1,7 @@
+textarea:focus-visible {
+    outline: none;
+}
+
+.npm__react-simple-code-editor__textarea{
+    background: #0000000a !important;
+}

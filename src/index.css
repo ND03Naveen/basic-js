@@ -12,6 +12,26 @@ code {
     monospace;
 }
 
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+p {
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+  font-size: 15px;
+  line-height: 1.5625;
+}
+
 .primaryColor{
   color: #55ac8f;
 }

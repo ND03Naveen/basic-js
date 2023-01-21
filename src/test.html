@@ -1,0 +1,41 @@
+<html>
+
+<style>
+    #username {
+        margin-top: 5px;
+    }
+
+    #helperText {
+        margin: 0px;
+        font-size: 13px;
+        font-style: italic;
+        margin-top: 2px;
+    }
+</style>
+
+<body>
+    <h2>Validation </h2>
+    <label for="username">User name *</label><br>
+    <input id="username"><br>
+    <p id="helperText">Manditory value</p>
+    <button style="margin-top:20px" onclick="handleValidation()">SUBMIT</button>
+</body>
+
+<script>
+    function handleValidation() {
+        var username = document.getElementById("username");
+        var helperText = document.getElementById("helperText");
+        if (!username.value) {
+            username.style["border"] = "2px solid red";
+            helperText.innerHTML = "User name should not be empty";
+            helperText.style["color"] = "red"
+        }
+        else {
+            username.style["border"] = "2px solid green";
+            helperText.innerHTML = "User name is proper";
+            helperText.style["color"] = "green"
+        }
+    }
+</script>
+
+</html>

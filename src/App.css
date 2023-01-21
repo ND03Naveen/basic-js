@@ -1,0 +1,9 @@
+.HtmlOutput{
+    justify-content: center;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(231, 235, 240);
+    padding: 24px;
+    margin: 1.2em 0px;
+}
