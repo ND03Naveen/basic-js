@@ -18,11 +18,11 @@ function Variables() {
 
             <h3>Types of variables</h3>
             <p><span className="keywords">let </span>&nbsp; (block scope),&nbsp;
-            <span className="keywords">var </span> &nbsp;(functional scope) and&nbsp;
-            <span className="keywords">const </span> &nbsp;values can not be changeable.</p>
+                <span className="keywords">var </span> &nbsp;(functional scope) and&nbsp;
+                <span className="keywords">const </span> &nbsp;values can not be changeable.</p>
 
             <h3>Block Scope(Let)</h3>
-            <p>Parenthesis ({}) is called a block. let variable has lifetime only inside a block.</p>
+            <p>Parenthesis ({ }) is called a block. let variable has lifetime only inside a block.</p>
             <CodeEditor code={letEg1} />
             <p>Console Output: <span className="keywords">Bharathi</span></p>
             <CodeEditor code={letEg2} />
@@ -43,6 +43,7 @@ function Variables() {
             <p>Console Output: <span className="keywords">Uncaught TypeError: Assignment to constant variable</span></p>
             <p>because the variable name is the const type and it's not changeable.</p>
 
+            <div className="powr-comments" id="31f74d4e_1674414411"></div>
         </Grid>
     )
 }
