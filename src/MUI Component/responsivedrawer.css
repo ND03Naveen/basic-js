@@ -1,0 +1,7 @@
+.activeMenu{
+    color: #217f60;
+}
+
+.activeMenu>span{
+    font-weight: 500;
+}

@@ -5,6 +5,10 @@ import TouchAppOutlinedIcon from '@mui/icons-material/TouchAppOutlined';
 
 function automateExample() {
   let username = document.getElementById("username");
+  if(!username){
+    clearInterval(playExample);
+    return;
+  }
   if (username.value) {
     setTimeout(() => username.value = "Bharathi", 100);
     setTimeout(() => username.value = "Bharath", 200);
@@ -68,7 +72,8 @@ function HtmlDOM() {
       <h2>HTML DOM</h2>
       <p>It is used to update or modify the HTML dynamically. </p>
       <h3>Why its needed?</h3>
-      <p>Without this, we can't do any updation on the website based on some actions.<br/> Let's take the below example,
+      <p>Without this, we can't do any updation on the website based on some actions.</p>
+      <p> Let's take the below example,
       Here we are updating an HTML ( i.e, updating an input field border color and helper text)  when submit button is clicked based on entered value.</p>
       <Grid container className="HtmlOutput" >
         <Grid>
@@ -89,8 +94,8 @@ function HtmlDOM() {
       <CodeEditor code={htmlExample} />
       <h3>JS</h3>
       <CodeEditor code={jsExample} />
-      <p>In the above example, we have used only the id to access the element by we can also use the <b>class name</b>, <b>tag name</b>, and <b>CSS selector</b>. The only difference is, it will give an array of elements instead of a single element.</p>
-      <div class="powr-comments" id="3d4ddae0_1674375475"></div>
+      <p>In the above example, we have used only the id to access the element by we can also use the <span className="keywords" >class name</span>, <span className="keywords">tag name</span>, and <span className="keywords">CSS selector</span>. The only difference is, it will give an array of elements instead of a single element.</p>
+      <div className="powr-comments" id="3d4ddae0_1674375475"></div>
     </Grid>
   );
 }

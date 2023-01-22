@@ -21,6 +21,9 @@ import { styled, alpha } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import RouterComponent from "../router";
+import { Link } from "react-router-dom";
+import "./responsivedrawer.css";
+import { useEffect } from 'react';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -81,14 +84,34 @@ const style = {
         letterSpacing: ".08rem"
     }
 }
-function ResponsiveDrawer(props) {
-    const { window } = props;
-    const [mobileOpen, setMobileOpen] = React.useState(false);
 
+function ResponsiveDrawer(props) {
+    const { window,url } = props;
+    const [mobileOpen, setMobileOpen] = React.useState(false);
+    const [menus,setMenus] = React.useState([
+        {label:"JS VARIABLES",link:"/variables"},
+        {label:"JS HTML DOM",link:"/HtmlDOM"}
+    ]);
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
 
+    useEffect(()=>{
+        let menu = menus.map(val=>{
+            if(new RegExp(val.link).test(url)) val["isActive"] = true;
+            else val["isActive"] = false;
+            return val
+        })
+        setMenus(menu);
+    },[])
+    const handleActiveMenu =(link) =>{
+        let menu = menus.map(val=>{
+            if(val.link === link) val["isActive"] = true;
+            else val["isActive"] = false;
+            return val
+        })
+        setMenus(menu);
+    }
     const drawer = (
         <div>
             <Toolbar >
@@ -103,11 +126,11 @@ function ResponsiveDrawer(props) {
                 </Grid>
             </Toolbar>
             <Divider />
-            <List>
-                {["JS HTML DOM"].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            <ListItemText primary={text} style={{ paddingLeft: "25px" }} />
+            <List >
+                {menus.map((text, index) => (
+                    <ListItem key={text+index} disablePadding >
+                        <ListItemButton style={{paddingBottom: "0px"}} onClick={()=>handleActiveMenu(text.link)}>
+                        <Link to={text.link} style={{textDecoration:"none"}}><ListItemText className={text.isActive?'activeMenu':'greyBlack'} primary={text.label} style={{ paddingLeft: "25px"}} /></Link>
                         </ListItemButton>
                     </ListItem>
                 ))}
