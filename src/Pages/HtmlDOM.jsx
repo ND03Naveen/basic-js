@@ -90,6 +90,7 @@ function HtmlDOM() {
       <h3>JS</h3>
       <CodeEditor code={jsExample} />
       <p>In the above example, we have used only the id to access the element by we can also use the <b>class name</b>, <b>tag name</b>, and <b>CSS selector</b>. The only difference is, it will give an array of elements instead of a single element.</p>
+      <div class="powr-comments" id="3d4ddae0_1674375475"></div>
     </Grid>
   );
 }

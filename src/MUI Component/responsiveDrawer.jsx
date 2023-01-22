@@ -21,7 +21,6 @@ import { styled, alpha } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import RouterComponent from "../router";
-import { BrowserRouter, Routes } from "react-router-dom";
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -120,7 +119,6 @@ function ResponsiveDrawer(props) {
 
     return (
         <Box sx={{ display: 'flex' }}>
-            <BrowserRouter>
                 <CssBaseline />
                 <AppBar
                     position="fixed"
@@ -210,7 +208,6 @@ function ResponsiveDrawer(props) {
                     <Toolbar />
                     <RouterComponent />
                 </Box>
-            </BrowserRouter>
         </Box>
     );
 }
