@@ -95,6 +95,7 @@ function HtmlDOM() {
       <h3>JS</h3>
       <CodeEditor code={jsExample} />
       <p>In the above example, we have used only the id to access the element by we can also use the <span className="keywords" >class name</span>, <span className="keywords">tag name</span>, and <span className="keywords">CSS selector</span>. The only difference is, it will give an array of elements instead of a single element.</p>
+      
       <div className="powr-comments" id="3d4ddae0_1674375475"></div>
     </Grid>
   );

@@ -89,7 +89,9 @@ function ResponsiveDrawer(props) {
     const { window,url } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [menus,setMenus] = React.useState([
-        {label:"JS VARIABLES",link:"/variables"},
+        {label:"JS Variables",link:"/variables"},
+        {label:"JS If Else",link:"/ifElse"},
+        {label:"JS Function",link:"/functions"},                
         {label:"JS HTML DOM",link:"/HtmlDOM"}
     ]);
     const handleDrawerToggle = () => {
@@ -97,11 +99,14 @@ function ResponsiveDrawer(props) {
     };
 
     useEffect(()=>{
+        let baseRoute = true;
         let menu = menus.map(val=>{
             if(new RegExp(val.link).test(url)) val["isActive"] = true;
             else val["isActive"] = false;
-            return val
+            if(val["isActive"]) baseRoute = false;
+            return val;
         })
+        if(baseRoute) menu[0].isActive = true;
         setMenus(menu);
     },[])
     const handleActiveMenu =(link) =>{
@@ -129,9 +134,11 @@ function ResponsiveDrawer(props) {
             <List >
                 {menus.map((text, index) => (
                     <ListItem key={text+index} disablePadding >
+                        <Link to={text.link} style={{textDecoration:"none",width: "100%"}}>
                         <ListItemButton style={{paddingBottom: "0px"}} onClick={()=>handleActiveMenu(text.link)}>
-                        <Link to={text.link} style={{textDecoration:"none"}}><ListItemText className={text.isActive?'activeMenu':'greyBlack'} primary={text.label} style={{ paddingLeft: "25px"}} /></Link>
+                        <ListItemText className={text.isActive?'activeMenu':'greyBlack'} primary={text.label} style={{ paddingLeft: "25px"}} />
                         </ListItemButton>
+                        </Link>
                     </ListItem>
                 ))}
             </List>
