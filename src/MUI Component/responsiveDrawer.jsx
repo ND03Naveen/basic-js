@@ -90,8 +90,15 @@ function ResponsiveDrawer(props) {
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [menus,setMenus] = React.useState([
         {label:"JS Variables",link:"/variables"},
+        {label:"JS Operator",link:"/operator"}, 
         {label:"JS If Else",link:"/ifElse"},
-        {label:"JS Function",link:"/functions"},                
+        {label:"JS Function",link:"/functions"},
+        {label:"JS Loop",link:"/loop"}, 
+        {label:"JS String",link:"/string"},
+        {label:"JS Array",link:"/array"}, 
+        {label:"Type Conversion",link:"/typeConversion"}, 
+        {label:"JS RegEx",link:"/regex"},                 
+        {label:"JS Integration",link:"/integration"}, 
         {label:"JS HTML DOM",link:"/HtmlDOM"}
     ]);
     const handleDrawerToggle = () => {
