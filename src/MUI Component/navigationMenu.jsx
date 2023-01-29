@@ -6,7 +6,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Link } from "react-router-dom";
 
 const options = [
-  {"name":"HOME","link":"home"},{"name":"ABOUT","link":"about"},,{"name":"CONTACT","link":"contact"}
+  {"name":"HOME","link":"home"},{"name":"About Us","link":"aboutUs"},,{"name":"Contact Us","link":"contactUs"}
 ];
 
 const ITEM_HEIGHT = 48;

@@ -21,6 +21,10 @@ import LeftTrianglepattern from './Pattern/LeftTriangle';
 import Trianglepattern from './Pattern/Triangle';
 import Reversetrianglepattern from './Pattern/Reversetriangle';
 import Diamondpattern from './Pattern/Diamond';
+import Terms from './Pages/googleAdsense/Terms';
+import ContactUs from './Pages/googleAdsense/ContactUs';
+import AboutUs from './Pages/googleAdsense/AboutUs';
+import PrivacyPolicy from './Pages/googleAdsense/PrivacyPolicy';
 function RouterComponent() {
     
     return (
@@ -47,7 +51,11 @@ function RouterComponent() {
                 <Route path="/typeConversion" element={<TypeConversion />}></Route>
                 <Route path="/regex" element={<RegEx />}></Route>
                 <Route path="/integration" element={<Integration />}></Route> 
-                <Route path="/HtmlDOM" element={<HtmlDOM />}></Route>                
+                <Route path="/HtmlDOM" element={<HtmlDOM />}></Route>   
+                <Route path="/contactUs" element={<ContactUs />}></Route> 
+                <Route path="/terms" element={<Terms />}></Route> 
+                <Route path="/privacyPolicy" element={<PrivacyPolicy />}></Route>
+                <Route path="/aboutUs" element={<AboutUs />}></Route>                
             </Routes>
         </React.Fragment>
     );
