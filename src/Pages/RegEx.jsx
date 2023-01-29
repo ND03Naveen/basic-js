@@ -1,10 +1,13 @@
 import { Grid } from "@mui/material";
 import CodeEditor from "../code Editor/codeEditor";
-
+import NavigationButtons from "../navigationbuttonComp/navigationButtons";
 function RegEx() {
     return (
         <Grid>
-            <h2>Javascript Regular Experience</h2>
+            <h2>Javascript Regular Expression</h2>
+
+            <NavigationButtons lName="Type Conversion" lLink="/typeConversion" rName="API Integration" rLink="/integration"/>
+
             <p>It is mostly used to do the validation.</p>
 
             <h3>Syntax</h3>
@@ -47,6 +50,8 @@ function RegEx() {
             <CodeEditor code={regExEg10} />
             <p>Console Output: <span className="keywords">true</span></p>
 
+            <NavigationButtons lName="Type Conversion" lLink="/typeConversion" rName="API Integration" rLink="/integration"/>
+            
             <div className="powr-comments" id="6cdb2430_1674713328"></div>
         </Grid>
     )

@@ -1,10 +1,13 @@
 import { Grid } from "@mui/material";
 import CodeEditor from "../code Editor/codeEditor";
-
+import NavigationButtons from "../navigationbuttonComp/navigationButtons";
 function Loop() {
     return (
         <Grid>
             <h2>Javascript Loop</h2>
+
+            <NavigationButtons lName="Functions" lLink="/functions" rName="String" rLink="/string" />
+
             <p>It is used to do the same work multiple times.</p>
 
             <h3>Syntax</h3>
@@ -24,10 +27,12 @@ function Loop() {
             <p><span className="keywords">for in</span>&nbsp; method is to loop every attribute in the object.</p>
             <CodeEditor code={forinEg} />
 
-            <p>Console Output: <br /><br/>
-                <span className="keywords">name Bharathi</span><br/><br/>
-                <span className="keywords">dob 28-03-1996</span><br/><br/>
+            <p>Console Output: <br /><br />
+                <span className="keywords">name Bharathi</span><br /><br />
+                <span className="keywords">dob 28-03-1996</span><br /><br />
                 <span className="keywords">city kallakurichi</span></p>
+
+            <NavigationButtons lName="Functions" lLink="/functions" rName="String" rLink="/string" />
 
             <div className="powr-comments" id="2302a313_1674713336"></div>
         </Grid>

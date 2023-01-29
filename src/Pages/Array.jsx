@@ -1,10 +1,13 @@
 import { Grid } from "@mui/material";
 import CodeEditor from "../code Editor/codeEditor";
-
+import NavigationButtons from "../navigationbuttonComp/navigationButtons";
 function Array() {
     return (
         <Grid>
             <h2>Javascript Array</h2>
+
+            <NavigationButtons lName="String" lLink="/string" rName="Type Conversion" rLink="/typeConversion"/>
+
             <p>It is one of the data types and it is used to store more than one value.</p>
             <CodeEditor code={arrayEg} />
 
@@ -43,6 +46,8 @@ function Array() {
             <h3>Example: add one new user into array </h3>
             <CodeEditor code={pushEg} />
             <p>Console Output: <span className="keywords">{`[{"name":"Bharathi"},{"name":"Naveen"},"name":"NaveenBharathi"}]`}</span></p>
+
+            <NavigationButtons lName="String" lLink="/string" rName="Type Conversion" rLink="/typeConversion"/>
 
             <div className="powr-comments" id="8c93aad3_1674713343"></div>
         </Grid>

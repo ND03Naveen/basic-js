@@ -1,10 +1,11 @@
 import { Grid } from "@mui/material";
 import CodeEditor from "../code Editor/codeEditor";
-
+import NavigationButtons from "../navigationbuttonComp/navigationButtons";
 function Variables() {
     return (
         <Grid>
             <h2>Javascript Variables</h2>
+            <NavigationButtons lName="Variables" lLink="" rName="Operator" rLink="/operator"/>
             <p>It is used to store the value. The value may be a <span className="keywords">number</span>, <span className="keywords">string</span>, <span className="keywords">array</span>, <span className="keywords">boolean</span>, or <span className="keywords">object.</span></p>
 
             <CodeEditor code={valueTypeEg} />
@@ -43,6 +44,8 @@ function Variables() {
             <p>Console Output: <span className="keywords">Uncaught TypeError: Assignment to constant variable</span></p>
             <p>because the variable name is the const type and it's not changeable.</p>
 
+            <NavigationButtons lName="Variables" lLink="" rName="Operator" rLink="/operator"/>
+            
             <div className="powr-comments" id="31f74d4e_1674414411"></div>
         </Grid>
     )

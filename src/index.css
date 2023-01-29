@@ -20,7 +20,12 @@ h2 {
   font-size: 32px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 400;
   margin: 10px 0;
 }
@@ -32,10 +37,15 @@ p {
   line-height: 1.5625;
 }
 
-.primaryColor{
+.primaryColor {
   color: #55ac8f;
 }
 
-.greyBlack{
+.greyBlack {
   color: rgb(111, 126, 140);
+}
+
+.buttonStyle {
+  color: white !important;
+  background: #55ac8f !important;
 }

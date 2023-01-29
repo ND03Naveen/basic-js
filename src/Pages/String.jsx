@@ -1,10 +1,13 @@
 import { Grid } from "@mui/material";
 import CodeEditor from "../code Editor/codeEditor";
-
+import NavigationButtons from "../navigationbuttonComp/navigationButtons";
 function String() {
     return (
         <Grid>
             <h2>Javascript String</h2>
+
+            <NavigationButtons lName="Loop" lLink="/loop" rName="Array" rLink="/array"/>
+
             <p>It is one of the data types and it is used to store characters/ words/statements.</p>
             <CodeEditor code={stringEg} />
 
@@ -44,6 +47,8 @@ function String() {
             <p>It is used to remove the empty space from the start and end of the setence.</p>
             <CodeEditor code={trimEg} />
             <p>Console Output: <span className="keywords">bharathi</span></p>
+
+            <NavigationButtons lName="Loop" lLink="/loop" rName="Array" rLink="/array"/>
 
             <div className="powr-comments" id="6e9d2e4e_1674713323"></div>
         </Grid>

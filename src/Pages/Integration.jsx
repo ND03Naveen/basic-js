@@ -1,10 +1,13 @@
 import { Grid } from "@mui/material";
 import CodeEditor from "../code Editor/codeEditor";
-
+import NavigationButtons from "../navigationbuttonComp/navigationButtons";
 function Integration() {
     return (
         <Grid>
             <h2>Javascript API Integration</h2>
+
+            <NavigationButtons lName="Regular Expression" lLink="/regex" rName="HTML DOM" rLink="/HtmlDOM"/>
+
             <p>It is a very important topic in frontend Development. It is used to interact with the back end. like adding some details to Database or retrieving values from Database.</p>
             
             <h3>Fetch</h3>
@@ -20,6 +23,8 @@ function Integration() {
             <CodeEditor code={fetchEg} />
             <p>Console Output: <span className="keywords">{`{"fact": "some fact", "length":10}`}</span></p>
             
+            <NavigationButtons lName="Regular Expression" lLink="/regex" rName="HTML DOM" rLink="/HtmlDOM"/>
+
             <div className="powr-comments" id="f3690d13_1674713339"></div>
         </Grid>
     )

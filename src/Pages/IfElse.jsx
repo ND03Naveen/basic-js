@@ -1,10 +1,13 @@
 import { Grid } from "@mui/material";
 import CodeEditor from "../code Editor/codeEditor";
-
+import NavigationButtons from "../navigationbuttonComp/navigationButtons";
 function IfElse() {
     return (
         <Grid>
             <h2>Conditional Statement</h2>
+
+            <NavigationButtons lName="Operator" lLink="/operator" rName="Functions" rLink="/functions"/>
+
             <p>It is used to conditionally execute the block of code.</p>
             <h3>False Values</h3>
             <p>
@@ -43,6 +46,8 @@ function IfElse() {
             <p>There will be more than two blocks, the condition will start from the top and if any one block condition is true, then it will execute that block and come out of the If Else If condition. It won't go to the below blocks.</p>
             <CodeEditor code={ifElseifEg} />
             <p>Console Output: <span className="keywords">Step2</span></p>
+
+            <NavigationButtons lName="Operator" lLink="/operator" rName="Functions" rLink="/functions"/>
 
             <div className="powr-comments" id="d509f23a_1674578858"></div>
         </Grid>

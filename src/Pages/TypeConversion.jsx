@@ -1,10 +1,13 @@
 import { Grid } from "@mui/material";
 import CodeEditor from "../code Editor/codeEditor";
-
+import NavigationButtons from "../navigationbuttonComp/navigationButtons";
 function TypeConversion() {
     return (
         <Grid>
             <h2>Javascript Type Conversion</h2>
+
+            <NavigationButtons lName="Array" lLink="/array" rName="Regular Expression" rLink="/regex"/>
+
             <p>From the below examples, we are going to learn how to convert from one type to another.</p>
 
             <p><span className="keywords">typeof()</span> method is used to check the type of the variable,</p>
@@ -34,6 +37,8 @@ function TypeConversion() {
             <h3>String to Object</h3>
             <CodeEditor code={stringToObjectEg} />
             <p>Console Output: <span className="keywords">{` {name: 'Bharathi'}`}</span></p>
+
+            <NavigationButtons lName="Array" lLink="/array" rName="Regular Expression" rLink="/regex"/>
 
             <div className="powr-comments" id="ef73a908_1674713308"></div>
         </Grid>

@@ -1,10 +1,13 @@
 import { Grid } from "@mui/material";
 import CodeEditor from "../code Editor/codeEditor";
-
+import NavigationButtons from "../navigationbuttonComp/navigationButtons";
 function Functions() {
     return (
         <Grid>
             <h2>Javascript Functions</h2>
+
+            <NavigationButtons lName="If Else" lLink="/ifElse" rName="Loop" rLink="/loop"/>
+
             <p>It is a block/set of code which will do a specific action.</p>
             <p>The function will have two parts, Function definition and Function call.</p>
             <p><span className="keywords">Function definition</span> &nbsp; where we will define the purpose of the function.</p>
@@ -21,6 +24,8 @@ function Functions() {
             <p>Console Output: <span className="keywords">3</span></p>
             <CodeEditor code={Eg2} />
             <p>Console Output: <span className="keywords">-9</span></p>
+
+            <NavigationButtons lName="If Else" lLink="/ifElse" rName="Loop" rLink="/loop"/>
 
             <div className="powr-comments" id="99989504_1674578933"></div>
         </Grid>

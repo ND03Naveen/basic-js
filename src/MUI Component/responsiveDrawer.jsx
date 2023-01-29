@@ -25,6 +25,8 @@ import { Link } from "react-router-dom";
 import "./responsivedrawer.css";
 import { useEffect } from 'react';
 
+const BodyContext = React.createContext({});
+
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -86,44 +88,46 @@ const style = {
 }
 
 function ResponsiveDrawer(props) {
-    const { window,url } = props;
+    const { window, url } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
-    const [menus,setMenus] = React.useState([
-        {label:"JS Variables",link:"/variables"},
-        {label:"JS Operator",link:"/operator"}, 
-        {label:"JS If Else",link:"/ifElse"},
-        {label:"JS Function",link:"/functions"},
-        {label:"JS Loop",link:"/loop"}, 
-        {label:"JS String",link:"/string"},
-        {label:"JS Array",link:"/array"}, 
-        {label:"Type Conversion",link:"/typeConversion"}, 
-        {label:"JS RegEx",link:"/regex"},                 
-        {label:"JS Integration",link:"/integration"}, 
-        {label:"JS HTML DOM",link:"/HtmlDOM"}
+    const [menus, setMenus] = React.useState([
+        { label: "Home", link: "/home" },
+        { label: "JS Variables", link: "/variables" },
+        { label: "JS Operator", link: "/operator" },
+        { label: "JS If Else", link: "/ifElse" },
+        { label: "JS Function", link: "/functions" },
+        { label: "JS Loop", link: "/loop" },
+        { label: "JS String", link: "/string" },
+        { label: "JS Array", link: "/array" },
+        { label: "Type Conversion", link: "/typeConversion" },
+        { label: "JS RegEx", link: "/regex" },
+        { label: "JS Integration", link: "/integration" },
+        { label: "JS HTML DOM", link: "/HtmlDOM" }
     ]);
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
 
-    useEffect(()=>{
+    useEffect(() => {
         let baseRoute = true;
-        let menu = menus.map(val=>{
-            if(new RegExp(val.link).test(url)) val["isActive"] = true;
+        let menu = menus.map(val => {
+            if (new RegExp(val.link).test(url)) val["isActive"] = true;
             else val["isActive"] = false;
-            if(val["isActive"]) baseRoute = false;
+            if (val["isActive"]) baseRoute = false;
             return val;
         })
-        if(baseRoute) menu[0].isActive = true;
+        if (baseRoute) menu[0].isActive = true;
         setMenus(menu);
-    },[])
-    const handleActiveMenu =(link) =>{
-        let menu = menus.map(val=>{
-            if(val.link === link) val["isActive"] = true;
+    }, [])
+    const handleActiveMenu = (link) => {
+        let menu = menus.map(val => {
+            if (val.link === link) val["isActive"] = true;
             else val["isActive"] = false;
             return val
         })
         setMenus(menu);
     }
+    
     const drawer = (
         <div>
             <Toolbar >
@@ -140,11 +144,11 @@ function ResponsiveDrawer(props) {
             <Divider />
             <List >
                 {menus.map((text, index) => (
-                    <ListItem key={text+index} disablePadding >
-                        <Link to={text.link} style={{textDecoration:"none",width: "100%"}}>
-                        <ListItemButton style={{paddingBottom: "0px"}} onClick={()=>handleActiveMenu(text.link)}>
-                        <ListItemText className={text.isActive?'activeMenu':'greyBlack'} primary={text.label} style={{ paddingLeft: "25px"}} />
-                        </ListItemButton>
+                    <ListItem key={text.label + index} disablePadding >
+                        <Link to={text.link} style={{ textDecoration: "none", width: "100%" }}>
+                            <ListItemButton style={{ paddingBottom: "0px" }} onClick={() => handleActiveMenu(text.link)}>
+                                <ListItemText className={text.isActive ? 'activeMenu' : 'greyBlack'} primary={text.label} style={{ paddingLeft: "25px" }} />
+                            </ListItemButton>
                         </Link>
                     </ListItem>
                 ))}
@@ -156,95 +160,99 @@ function ResponsiveDrawer(props) {
 
     return (
         <Box sx={{ display: 'flex' }}>
-                <CssBaseline />
-                <AppBar
-                    position="fixed"
+            <CssBaseline />
+            <AppBar
+                position="fixed"
+                sx={{
+                    width: { sm: `calc(100% - ${drawerWidth}px)` },
+                    ml: { sm: `${drawerWidth}px` },
+                    background: "#55ac8f"
+                }}
+            >
+                <Toolbar>
+                    <IconButton
+                        color="inherit"
+                        aria-label="open drawer"
+                        edge="start"
+                        onClick={handleDrawerToggle}
+                        sx={{ mr: 2, display: { sm: 'none' } }}
+                    >
+                        <MenuIcon />
+                    </IconButton>
+
+                    <Box sx={{ display: { xs: 'none', sm: 'flex' }, width: "100%", justifyContent: "flex-end" }}>
+                        <Search>
+                            <SearchIconWrapper>
+                                <SearchIcon />
+                            </SearchIconWrapper>
+                            <StyledInputBase
+                                placeholder="Search…"
+                                inputProps={{ 'aria-label': 'search' }}
+                            />
+                        </Search>
+                        {[{ "name": "HOME", "link": "home" }, { "name": "ABOUT", "link": "about" }, , { "name": "CONTACT", "link": "contact" }].map((item) => (
+                            <Link to={item.link} style={{ textDecoration: "none" }}>
+                                <Button key={item.name} sx={{ color: '#fff' }}>
+                                    {item.name}
+                                </Button>
+                            </Link>
+                        ))}
+                    </Box>
+                    <Box sx={{ display: { xs: 'flex', sm: 'none' }, width: "100%", justifyContent: "flex-end" }}>
+                        <Search>
+                            <SearchIconWrapper>
+                                <SearchIcon />
+                            </SearchIconWrapper>
+                            <StyledInputBase
+                                placeholder="Search…"
+                                inputProps={{ 'aria-label': 'search' }}
+                            />
+                        </Search>
+                        <NavigationMenu />
+                    </Box>
+                </Toolbar>
+            </AppBar>
+            <Box
+                component="nav"
+                sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+                aria-label="mailbox folders"
+            >
+                {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+                <Drawer
+                    container={container}
+                    variant="temporary"
+                    open={mobileOpen}
+                    onClose={handleDrawerToggle}
+                    ModalProps={{
+                        keepMounted: true, // Better open performance on mobile.
+                    }}
                     sx={{
-                        width: { sm: `calc(100% - ${drawerWidth}px)` },
-                        ml: { sm: `${drawerWidth}px` },
-                        background: "#55ac8f"
+                        display: { xs: 'block', sm: 'none' },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
                     }}
                 >
-                    <Toolbar>
-                        <IconButton
-                            color="inherit"
-                            aria-label="open drawer"
-                            edge="start"
-                            onClick={handleDrawerToggle}
-                            sx={{ mr: 2, display: { sm: 'none' } }}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-
-                        <Box sx={{ display: { xs: 'none', sm: 'flex' }, width: "100%", justifyContent: "flex-end" }}>
-                            <Search>
-                                <SearchIconWrapper>
-                                    <SearchIcon />
-                                </SearchIconWrapper>
-                                <StyledInputBase
-                                    placeholder="Search…"
-                                    inputProps={{ 'aria-label': 'search' }}
-                                />
-                            </Search>
-                            {["HOME", "ABOUT", "CONTACT"].map((item) => (
-                                <Button key={item} sx={{ color: '#fff' }}>
-                                    {item}
-                                </Button>
-                            ))}
-                        </Box>
-                        <Box sx={{ display: { xs: 'flex', sm: 'none' }, width: "100%", justifyContent: "flex-end" }}>
-                            <Search>
-                                <SearchIconWrapper>
-                                    <SearchIcon />
-                                </SearchIconWrapper>
-                                <StyledInputBase
-                                    placeholder="Search…"
-                                    inputProps={{ 'aria-label': 'search' }}
-                                />
-                            </Search>
-                            <NavigationMenu />
-                        </Box>
-                    </Toolbar>
-                </AppBar>
-                <Box
-                    component="nav"
-                    sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-                    aria-label="mailbox folders"
+                    {drawer}
+                </Drawer>
+                <Drawer
+                    variant="permanent"
+                    sx={{
+                        display: { xs: 'none', sm: 'block' },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                    }}
+                    open
                 >
-                    {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-                    <Drawer
-                        container={container}
-                        variant="temporary"
-                        open={mobileOpen}
-                        onClose={handleDrawerToggle}
-                        ModalProps={{
-                            keepMounted: true, // Better open performance on mobile.
-                        }}
-                        sx={{
-                            display: { xs: 'block', sm: 'none' },
-                            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-                        }}
-                    >
-                        {drawer}
-                    </Drawer>
-                    <Drawer
-                        variant="permanent"
-                        sx={{
-                            display: { xs: 'none', sm: 'block' },
-                            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-                        }}
-                        open
-                    >
-                        {drawer}
-                    </Drawer>
-                </Box>
-                <Box
-                    component="main"
-                    sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
-                >
-                    <Toolbar />
+                    {drawer}
+                </Drawer>
+            </Box>
+            <Box
+                component="main"
+                sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+            >
+                <Toolbar />
+                <BodyContext.Provider value={{ handleActiveMenu: handleActiveMenu }}>
                     <RouterComponent />
-                </Box>
+                </BodyContext.Provider>
+            </Box>
         </Box>
     );
 }
@@ -257,4 +265,6 @@ ResponsiveDrawer.propTypes = {
     window: PropTypes.func,
 };
 
-export default ResponsiveDrawer;
+const useBodyContext = () => React.useContext(BodyContext);
+
+export {ResponsiveDrawer,useBodyContext};

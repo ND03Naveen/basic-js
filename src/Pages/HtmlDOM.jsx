@@ -2,7 +2,7 @@ import { Grid } from "@mui/material";
 import { useEffect } from "react";
 import CodeEditor from "../code Editor/codeEditor";
 import TouchAppOutlinedIcon from '@mui/icons-material/TouchAppOutlined';
-
+import NavigationButtons from "../navigationbuttonComp/navigationButtons";
 function automateExample() {
   let username = document.getElementById("username");
   if(!username){
@@ -70,6 +70,9 @@ function HtmlDOM() {
   return (
     <Grid>
       <h2>HTML DOM</h2>
+      
+      <NavigationButtons lName="API Integration" lLink="/integration" rName="HTML DOM" rLink=""/>
+
       <p>It is used to update or modify the HTML dynamically. </p>
       <h3>Why its needed?</h3>
       <p>Without this, we can't do any updation on the website based on some actions.</p>
@@ -96,6 +99,8 @@ function HtmlDOM() {
       <CodeEditor code={jsExample} />
       <p>In the above example, we have used only the id to access the element by we can also use the <span className="keywords" >class name</span>, <span className="keywords">tag name</span>, and <span className="keywords">CSS selector</span>. The only difference is, it will give an array of elements instead of a single element.</p>
       
+      <NavigationButtons lName="API Integration" lLink="/integration" rName="HTML DOM" rLink=""/>
+
       <div className="powr-comments" id="3d4ddae0_1674375475"></div>
     </Grid>
   );

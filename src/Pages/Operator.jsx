@@ -1,10 +1,12 @@
 import { Grid } from "@mui/material";
 import CodeEditor from "../code Editor/codeEditor";
-
+import NavigationButtons from "../navigationbuttonComp/navigationButtons";
 function Operator() {
     return (
         <Grid>
             <h2>Javascript Operators</h2>
+
+            <NavigationButtons lName="Variable" lLink="/variables" rName="If Else" rLink="/ifElse"/>
 
             <h3>== (Equal to)</h3>
             <p>This operator is used to compare the two values. The return value of this operator is true or false.</p>
@@ -52,6 +54,8 @@ function Operator() {
             <h3>using ternary</h3>
             <CodeEditor code={ternaryEg} />
             <p>Console Output: <span className="keywords">true</span></p>
+
+            <NavigationButtons lName="Variable" lLink="/variables" rName="If Else" rLink="/ifElse"/>
 
             <div className="powr-comments" id="bbfa5f74_1674713332"></div>
         </Grid>
