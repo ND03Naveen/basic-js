@@ -12,7 +12,7 @@ import CodeEditor from "../../code Editor/codeEditor";
 
 const client = axios.create({
     headers: {
-        Authorization: 'Bearer ' + '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'
+        Authorization: 'Bearer ' + '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'
     },
 });
 
