@@ -1,0 +1,10 @@
+.samplequestion{
+    justify-content: center;
+    color: white;
+    background: #55ac8f;
+    width: 300px;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px 0px;
+    text-align: center;
+}

@@ -25,13 +25,15 @@ import Terms from './Pages/googleAdsense/Terms';
 import ContactUs from './Pages/googleAdsense/ContactUs';
 import AboutUs from './Pages/googleAdsense/AboutUs';
 import PrivacyPolicy from './Pages/googleAdsense/PrivacyPolicy';
+import OpenAIPage from './Pages/OpenAI/openAI';
 function RouterComponent() {
     
     return (
         <React.Fragment>
             <Routes>
-                <Route path="/" element={<Home />}></Route>
-                <Route path="/home" element={<Home />}></Route>
+                <Route path="/" element={<OpenAIPage />}></Route>
+                <Route path="/home" element={<OpenAIPage />}></Route>
+                <Route path="/pattern" element={<Home />}></Route>
                 <Route path="/starPattern" element={<StartPattern />}></Route>
                 <Route path="/verticalLinePattern" element={<VerticalLinePattern />}></Route>
                 <Route path="/horizontalLinepattern" element={<HorizontalLinepattern />}></Route>

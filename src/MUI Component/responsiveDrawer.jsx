@@ -102,7 +102,8 @@ function ResponsiveDrawer(props) {
         { label: "Type Conversion", link: "/typeConversion" },
         { label: "JS RegEx", link: "/regex" },
         { label: "JS Integration", link: "/integration" },
-        { label: "JS HTML DOM", link: "/HtmlDOM" }
+        { label: "JS HTML DOM", link: "/HtmlDOM" },
+        { label : "Pattern Excersise", link:"/pattern"}
     ]);
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);

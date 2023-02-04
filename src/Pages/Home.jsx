@@ -75,6 +75,7 @@ const patterns = [{
        *  *  *   
           * `
 }]
+
 function Home() {
     return (
         <Grid>
