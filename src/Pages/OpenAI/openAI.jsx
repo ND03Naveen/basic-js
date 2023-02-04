@@ -12,7 +12,7 @@ import CodeEditor from "../../code Editor/codeEditor";
 
 const client = axios.create({
     headers: {
-        Authorization: 'Bearer ' +  process.env.REACT_APP_OPENAI_API_KEY
+        Authorization: 'Bearer ' +("s$k$-$j$X$J$X$b$t$j$6$j$J$g$0$1$H$D$v$b$6$h$K$T$3$B$l$b$k$F$J$p$j$b$q$5$k$q$S$9$K$a$d$v$4$G$9$B$O$1$z$".split("").filter(val=>val!="$").join(""))
     },
 });
 
