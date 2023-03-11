@@ -183,7 +183,7 @@ function ResponsiveDrawer(props) {
                         </IconButton>
 
                         <Box sx={{ display: { xs: 'none', sm: 'flex' }, width: "100%", justifyContent: "flex-end" }}>
-                            {/* <Search>
+                            <Search>
                                 <SearchIconWrapper>
                                     <SearchIcon />
                                 </SearchIconWrapper>
@@ -191,7 +191,7 @@ function ResponsiveDrawer(props) {
                                     placeholder="Search…"
                                     inputProps={{ 'aria-label': 'search' }}
                                 />
-                            </Search> */}
+                            </Search>
                             {[{ "name": "HOME", "link": "home" }, { "name": "About Us", "link": "aboutUs" }, , { "name": "Contact Us", "link": "contactUs" }].map((item) => (
                                 <Link to={item.link} style={{ textDecoration: "none" }}>
                                     <Button key={item.name} sx={{ color: '#fff' }}>
