@@ -1,0 +1,54 @@
+{
+    "topic": "Promises in JavaScript",
+    "content": [
+    {
+    "type": "paragraph",
+    "text": "Promises are a way to handle asynchronous operations in JavaScript. They allow you to write code that can handle the result of an asynchronous operation once it's completed."
+    },
+    {
+    "type": "funFact",
+    "text": "Promises were introduced in ES6 (ECMAScript 2015) and are now widely used in modern JavaScript development."
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of a Promise:",
+    "code": "const myPromise = new Promise((resolve, reject) => {\n setTimeout(() => {\n resolve('Promise resolved');\n }, 1000);\n});"
+    },
+    {
+    "type": "quiz",
+    "question": "What is the purpose of a Promise?",
+    "options": [
+    "To handle synchronous operations",
+    "To handle asynchronous operations",
+    "To handle both synchronous and asynchronous operations",
+    "To handle network operations only"
+    ],
+    "answer": "To handle asynchronous operations"
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of how to use a Promise:",
+    "code": "myPromise.then((result) => {\n console.log(result);\n});"
+    },
+    {
+    "type": "funFact",
+    "text": "Promises have three states: pending, fulfilled, and rejected. They can only transition from pending to either fulfilled or rejected, and once they transition to either of those states, they can't transition to another state."
+    },
+    {
+    "type": "quiz",
+    "question": "What is the difference between the 'resolve' and 'reject' functions in a Promise?",
+    "options": [
+    "'resolve' is called when the Promise is fulfilled and 'reject' is called when the Promise is rejected",
+    "'resolve' is called when the Promise is rejected and 'reject' is called when the Promise is fulfilled",
+    "'resolve' and 'reject' are the same thing",
+    "There is no difference"
+    ],
+    "answer": "'resolve' is called when the Promise is fulfilled and 'reject' is called when the Promise is rejected"
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of how to handle errors with Promises using the 'catch' method:",
+    "code": "myPromise.catch((error) => {\n console.error(error);\n});"
+    }
+    ]
+    }

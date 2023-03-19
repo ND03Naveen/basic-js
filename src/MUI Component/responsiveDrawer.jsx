@@ -12,10 +12,8 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import { Grid } from '@mui/material';
 import logo from "../JAVASCRIPT2.png";
-import Button from '@mui/material/Button';
 import NavigationMenu from "./navigationMenu";
 import { styled, alpha } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
@@ -87,24 +85,147 @@ const style = {
     }
 }
 
+var window1 = window;
 function ResponsiveDrawer(props) {
     const { window, url } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
+    // const [menus, setMenus] = React.useState([
+    //     { label: "Home", link: "/home" },
+    //     { label: "JS Variables", link: "/variables" },
+    //     { label: "JS Operator", link: "/operator" },
+    //     { label: "JS If Else", link: "/ifElse" },
+    //     { label: "JS Function", link: "/functions" },
+    //     { label: "JS Loop", link: "/loop" },
+    //     { label: "JS String", link: "/string" },
+    //     { label: "JS Array", link: "/array" },
+    //     { label: "Type Conversion", link: "/typeConversion" },
+    //     { label: "JS RegEx", link: "/regex" },
+    //     { label: "JS Integration", link: "/integration" },
+    //     { label: "JS HTML DOM", link: "/HtmlDOM" },
+    //     { label : "Pattern Excersise", link:"/pattern"}
+    // ]);
     const [menus, setMenus] = React.useState([
-        { label: "Home", link: "/home" },
-        { label: "JS Variables", link: "/variables" },
-        { label: "JS Operator", link: "/operator" },
-        { label: "JS If Else", link: "/ifElse" },
-        { label: "JS Function", link: "/functions" },
-        { label: "JS Loop", link: "/loop" },
-        { label: "JS String", link: "/string" },
-        { label: "JS Array", link: "/array" },
-        { label: "Type Conversion", link: "/typeConversion" },
-        { label: "JS RegEx", link: "/regex" },
-        { label: "JS Integration", link: "/integration" },
-        { label: "JS HTML DOM", link: "/HtmlDOM" },
-        { label : "Pattern Excersise", link:"/pattern"}
-    ]);
+        {
+            "label": "Introduction to JavaScript",
+            "link": "/Introduction%20to%20JavaScript"
+        },
+        {
+            "label": "Variables and Data Types",
+            "link": "/Variables%20and%20Data%20Types"
+        },
+        {
+            "label": "Operators",
+            "link": "/Operators"
+        },
+        {
+            "label": "Conditionals",
+            "link": "/Conditionals"
+        },
+        {
+            "label": "Loops",
+            "link": "/Loops"
+        },
+        {
+            "label": "Arrays",
+            "link": "/Arrays"
+        },
+        {
+            "label": "Functions",
+            "link": "/Functions"
+        },
+        {
+            "label": "Objects",
+            "link": "/Objects"
+        },
+        {
+            "label": "Events",
+            "link": "/Events"
+        },
+        {
+            "label": "DOM Manipulation",
+            "link": "/DOM%20Manipulation"
+        },
+        {
+            "label": "Debugging Techniques",
+            "link": "/Debugging%20Techniques"
+        },
+        {
+            "label": "Error Handling",
+            "link": "/Error%20Handling"
+        },
+        {
+            "label": "AJAX",
+            "link": "/AJAX"
+        },
+        {
+            "label": "JSON",
+            "link": "/JSON"
+        },
+        {
+            "label": "Local Storage",
+            "link": "/Local%20Storage"
+        },
+        {
+            "label": "ES6 Features",
+            "link": "/ES6%20Features"
+        },
+        {
+            "label": "Regular Expressions",
+            "link": "/Regular%20Expressions"
+        },
+        {
+            "label": "Promises",
+            "link": "/Promises"
+        },
+        {
+            "label": "Callback Functions",
+            "link": "/Callback%20Functions"
+        },
+        {
+            "label": "Higher Order Functions",
+            "link": "/Higher%20Order%20Functions"
+        },
+        {
+            "label": "Arrow Functions",
+            "link": "/Arrow%20Functions"
+        },
+        {
+            "label": "Spread and Rest Operators",
+            "link": "/Spread%20and%20Rest%20Operators"
+        },
+        {
+            "label": "Destructuring",
+            "link": "/Destructuring"
+        },
+        {
+            "label": "Template Literals",
+            "link": "/Template%20Literals"
+        },
+        {
+            "label": "Classes",
+            "link": "/Classes"
+        },
+        {
+            "label": "Inheritance",
+            "link": "/Inheritance"
+        },
+        {
+            "label": "Modules",
+            "link": "/Modules"
+        },
+        {
+            "label": "Asynchronous Programming",
+            "link": "/Asynchronous%20Programming"
+        },
+        {
+            "label": "Web APIs",
+            "link": "/Web%20APIs"
+        },
+        {
+            "label": "Third-party Libraries",
+            "link": "/Third-party%20Libraries"
+        }
+    ])
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
@@ -127,6 +248,9 @@ function ResponsiveDrawer(props) {
             return val
         })
         setMenus(menu);
+        setMobileOpen(false);
+        // scroll to Top of the page
+        document.documentElement.scrollTop = 0;
     }
 
     const drawer = (
@@ -159,9 +283,16 @@ function ResponsiveDrawer(props) {
 
     const container = window !== undefined ? () => window().document.body : undefined;
 
+    const handleSearch = (event) => {
+        if (event.keyCode === 13 || event.which === 13) {
+            window1.location.hash = `#/${menus.map(val=>val.label).find(str => RegExp(event.target.value,"i").test(str))}`;
+            event.target.value = "";
+        }
+    }
+
     return (
         <React.Fragment>
-            <Box sx={{ display: 'flex' ,minHeight:"93.3vh"}}>
+            <Box sx={{ display: 'flex', minHeight: "93.3vh" }}>
                 <CssBaseline />
                 <AppBar
                     position="fixed"
@@ -183,33 +314,29 @@ function ResponsiveDrawer(props) {
                         </IconButton>
 
                         <Box sx={{ display: { xs: 'none', sm: 'flex' }, width: "100%", justifyContent: "flex-end" }}>
-                            <Search>
+                            <Search style={{ width: "300px" }}>
                                 <SearchIconWrapper>
                                     <SearchIcon />
                                 </SearchIconWrapper>
                                 <StyledInputBase
                                     placeholder="Search…"
                                     inputProps={{ 'aria-label': 'search' }}
+                                    onKeyDown={handleSearch}
                                 />
                             </Search>
-                            {[{ "name": "HOME", "link": "home" }, { "name": "About Us", "link": "aboutUs" }, , { "name": "Contact Us", "link": "contactUs" }].map((item) => (
-                                <Link to={item.link} style={{ textDecoration: "none" }}>
-                                    <Button key={item.name} sx={{ color: '#fff' }}>
-                                        {item.name}
-                                    </Button>
-                                </Link>
-                            ))}
+                            <NavigationMenu />
                         </Box>
                         <Box sx={{ display: { xs: 'flex', sm: 'none' }, width: "100%", justifyContent: "flex-end" }}>
-                            {/* <Search>
+                            <Search >
                                 <SearchIconWrapper>
                                     <SearchIcon />
                                 </SearchIconWrapper>
                                 <StyledInputBase
                                     placeholder="Search…"
                                     inputProps={{ 'aria-label': 'search' }}
+                                    onKeyDown={handleSearch}
                                 />
-                            </Search> */}
+                            </Search>
                             <NavigationMenu />
                         </Box>
                     </Toolbar>
@@ -251,23 +378,23 @@ function ResponsiveDrawer(props) {
                     sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
                 >
                     <Toolbar />
-                    <BodyContext.Provider value={{ handleActiveMenu: handleActiveMenu }}>
+                    <BodyContext.Provider value={{ handleActiveMenu: handleActiveMenu ,menus:menus}}>
                         <RouterComponent />
                     </BodyContext.Provider>
                 </Box>
             </Box>
             {/* footer */}
-            <Grid className='footer' container style={{ justifyContent: "center" }}>
-                <Grid item style={{margin:"0px 20px"}}>
+            {/*<Grid className='footer' container style={{ justifyContent: "center" }}>
+                 <Grid item style={{margin:"0px 20px"}}>
                     <Link key={"contactUs"} to={"/contactUs"} style={{ textDecoration: "none", color: "inherit" }}>Contact Us</Link>
-                </Grid>
+                </Grid> 
                 <Grid item style={{margin:"0px 20px"}}>
                     <Link key={"terms"} to={"/terms"} style={{ textDecoration: "none", color: "inherit" }}>Terms of Service</Link>
                 </Grid>
                 <Grid item style={{margin:"0px 20px"}}>
                     <Link key={"privacyPolicy"} to={"/privacyPolicy"} style={{ textDecoration: "none", color: "inherit" }}>Privacy Policy</Link>
                 </Grid>
-            </Grid>
+            </Grid> */}
         </React.Fragment>
     );
 }

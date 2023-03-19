@@ -1,0 +1,49 @@
+{
+    "topic": "Callback Functions in JavaScript",
+    "content": [
+    {
+    "type": "paragraph",
+    "text": "In JavaScript, a callback function is a function passed into another function as an argument, which is then executed inside the outer function to complete some kind of action or operation. Callback functions are commonly used in asynchronous programming, such as when making AJAX requests or working with event listeners."
+    },
+    {
+    "type": "funFact",
+    "text": "The term 'callback' comes from the idea that the outer function will 'call back' the inner function once it's ready to execute it."
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of a callback function:",
+    "code": "function myFunction(param1, param2, callback) {\n // do some operations with param1 and param2\n callback();\n}\n\nmyFunction('hello', 'world', () => {\n console.log('Callback function executed!');\n});"
+    },
+    {
+    "type": "quiz",
+    "question": "What is a callback function?",
+    "options": [
+    "A function that is called once an asynchronous operation is complete",
+    "A function that is passed as an argument to another function and executed inside it",
+    "A function that is used to handle errors in JavaScript",
+    "A function that is used to handle synchronous operations in JavaScript"
+    ],
+    "answer": "A function that is passed as an argument to another function and executed inside it"
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of a callback function being used to make an AJAX request:",
+    "code": "function makeRequest(url, callback) {\n const xhr = new XMLHttpRequest();\n xhr.open('GET', url);\n xhr.onload = function() {\n if(xhr.status === 200) {\n callback(xhr.response);\n }\n};\n xhr.send();\n}\n\nmakeRequest('https://jsonplaceholder.typicode.com/posts', (response) => {\n console.log(JSON.parse(response));\n});"
+    },
+    {
+    "type": "funFact",
+    "text": "Callbacks can also be used to make code more modular and reusable, as they allow you to pass in different functions to handle the same operation in different ways."
+    },
+    {
+    "type": "quiz",
+    "question": "What is one advantage of using callback functions?",
+    "options": [
+    "They make code more synchronous",
+    "They allow for better error handling",
+    "They allow for more modular and reusable code",
+    "They allow for easier debugging"
+    ],
+    "answer": "They allow for more modular and reusable code"
+    }
+    ]
+    }

@@ -6,7 +6,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Link } from "react-router-dom";
 
 const options = [
-  {"name":"HOME","link":"home"},{"name":"About Us","link":"aboutUs"},,{"name":"Contact Us","link":"contactUs"}
+  {"name":"HOME","link":""},{"name":"About Us","link":"aboutUs"},{"name":"Contact Us","link":"contactUs"},{"name":"Terms of Service","link":"terms"},{"name":"Privacy Policy","link":"privacyPolicy"}
 ];
 
 const ITEM_HEIGHT = 48;
@@ -44,7 +44,7 @@ export default function LongMenu() {
         onClose={handleClose}
         PaperProps={{
           style: {
-            maxHeight: ITEM_HEIGHT * 4.5,
+            maxHeight: ITEM_HEIGHT * 5.5,
             width: '20ch',
           },
         }}

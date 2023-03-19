@@ -1,0 +1,69 @@
+{
+    "topic": "Debugging Techniques in JavaScript",
+    "content": [
+    {
+    "type": "paragraph",
+    "text": "Debugging is an important skill for any programmer, and JavaScript developers are no exception. There are several techniques that can be used to debug JavaScript code and find and fix errors."
+    },
+    {
+    "type": "funFact",
+    "text": "Debugging is often referred to as 'the art of removing bugs' and the term 'debugging' was coined by Grace Hopper in the 1940s when she found a moth in a computer relay and removed it, thus 'debugging' the system."
+    },
+    {
+    "type": "code",
+    "text": "Here is an example of using the console.log() method for debugging:",
+    "code": "function add(a, b) {\n console.log('a:', a, 'b:', b);\n return a + b;\n}"
+    },
+    {
+    "type": "quiz",
+    "question": "What is the purpose of using the console.log() method for debugging?",
+    "options": [
+    "To display a message to the user",
+    "To stop the code from running",
+    "To print the value of a variable or expression to the console",
+    "To add a comment to the code"
+    ],
+    "answer": "To print the value of a variable or expression to the console"
+    },
+    {
+    "type": "code",
+    "text": "Here is an example of using the debugger statement for debugging:",
+    "code": "function multiply(a, b) {\n debugger;\n return a * b;\n}"
+    },
+    {
+    "type": "funFact",
+    "text": "The debugger statement is a built-in JavaScript statement that allows you to pause the execution of code and inspect the values of variables and expressions at a specific point in the code."
+    },
+    {
+    "type": "quiz",
+    "question": "What is the purpose of using the debugger statement for debugging?",
+    "options": [
+    "To stop the code from running",
+    "To print the value of a variable or expression to the console",
+    "To add a comment to the code",
+    "To pause the execution of code and inspect the values of variables and expressions"
+    ],
+    "answer": "To pause the execution of code and inspect the values of variables and expressions"
+    },
+    {
+    "type": "code",
+    "text": "Here is an example of using the try...catch statement for debugging:",
+    "code": "try {\n // some code that may throw an error\n}\ncatch(error) {\n console.error(error);\n}"
+    },
+    {
+    "type": "funFact",
+    "text": "The try...catch statement is a built-in JavaScript statement that allows you to handle errors that may occur during the execution of code."
+    },
+    {
+    "type": "quiz",
+    "question": "What is the purpose of using the try...catch statement for debugging?",
+    "options": [
+    "To stop the code from running",
+    "To print the value of a variable or expression to the console",
+    "To handle errors that may occur during the execution of code",
+    "To pause the execution of code and inspect the values of variables and expressions"
+    ],
+    "answer": "To handle errors that may occur during the execution of code"
+    }
+    ]
+    }

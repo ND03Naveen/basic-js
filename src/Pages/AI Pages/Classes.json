@@ -1,0 +1,69 @@
+{
+    "topic": "Classes in JavaScript",
+    "content": [
+    {
+    "type": "paragraph",
+    "text": "Classes are a way to define objects and their behavior in JavaScript. They were introduced in ECMAScript 2015 (ES6) and are now a standard part of the language."
+    },
+    {
+    "type": "funFact",
+    "text": "Classes in JavaScript are syntactical sugar over the existing prototype-based inheritance model."
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of a class definition in JavaScript:",
+    "code": "class Animal {\n constructor(name, sound) {\n this.name = name;\n this.sound = sound;\n }\n speak() {\n console.log(${this.name} says ${this.sound});\n }\n}"
+    },
+    {
+    "type": "quiz",
+    "question": "What is the purpose of a class in JavaScript?",
+    "options": [
+    "To define objects and their behavior",
+    "To define variables and functions",
+    "To create asynchronous operations",
+    "To handle errors in code"
+    ],
+    "answer": "To define objects and their behavior"
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of how to create an instance of a class:",
+    "code": "const cat = new Animal('Cat', 'Meow');"
+    },
+    {
+    "type": "funFact",
+    "text": "Classes can also inherit from other classes using the 'extends' keyword."
+    },
+    {
+    "type": "quiz",
+    "question": "What keyword is used to indicate that a class is inheriting from another class?",
+    "options": [
+    "inherits",
+    "extends",
+    "inheritsFrom",
+    "extendsFrom"
+    ],
+    "answer": "extends"
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of a class that inherits from another class:",
+    "code": "class Dog extends Animal {\n constructor(name) {\n super(name, 'Woof');\n }\n}"
+    },
+    {
+    "type": "funFact",
+    "text": "Classes can have static methods and properties, which are called on the class itself rather than on instances of the class."
+    },
+    {
+    "type": "quiz",
+    "question": "What are static methods and properties in a class?",
+    "options": [
+    "Methods and properties that can only be accessed by instances of the class",
+    "Methods and properties that are shared across all instances of the class",
+    "Methods and properties that are specific to a single instance of the class",
+    "Methods and properties that are not related to the class at all"
+    ],
+    "answer": "Methods and properties that are shared across all instances of the class"
+    }
+    ]
+    }

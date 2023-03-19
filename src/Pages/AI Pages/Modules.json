@@ -1,0 +1,54 @@
+{
+    "topic": "Modules in JavaScript",
+    "content": [
+    {
+    "type": "paragraph",
+    "text": "Modules in JavaScript allow you to organize your code into reusable, independent pieces. You can import and export these modules to use them in other parts of your codebase."
+    },
+    {
+    "type": "funFact",
+    "text": "Modules were introduced in ES6 (ECMAScript 2015) and are now widely supported in modern JavaScript environments."
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of exporting a module:",
+    "code": "export const add = (a, b) => a + b;"
+    },
+    {
+    "type": "quiz",
+    "question": "What is the purpose of modules in JavaScript?",
+    "options": [
+    "To organize code into reusable, independent pieces",
+    "To make code harder to reuse",
+    "To slow down performance",
+    "To make code more difficult to read"
+    ],
+    "answer": "To organize code into reusable, independent pieces"
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of importing a module:",
+    "code": "import { add } from './math.js';"
+    },
+    {
+    "type": "funFact",
+    "text": "You can also use the 'default' keyword when exporting a module to specify a default export for the module."
+    },
+    {
+    "type": "quiz",
+    "question": "What is the 'default' keyword used for when exporting a module?",
+    "options": [
+    "To specify a default export for the module",
+    "To make the module private",
+    "To prevent the module from being imported",
+    "There is no such keyword"
+    ],
+    "answer": "To specify a default export for the module"
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of using a default export:",
+    "code": "export default class Person {\n constructor(name) {\n this.name = name;\n }\n}"
+    }
+    ]
+    }

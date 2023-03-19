@@ -1,0 +1,49 @@
+{
+    "topic": "Arrow Functions in JavaScript",
+    "content": [
+    {
+    "type": "paragraph",
+    "text": "Arrow functions are a shorthand way to write functions in JavaScript. They were introduced in ES6 and have become widely used in modern JavaScript development."
+    },
+    {
+    "type": "funFact",
+    "text": "Arrow functions do not have their own 'this' value. Instead, they inherit the 'this' value from the enclosing lexical scope."
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of an arrow function:",
+    "code": "const add = (a, b) => a + b;"
+    },
+    {
+    "type": "quiz",
+    "question": "What is the syntax for an arrow function?",
+    "options": [
+    "function myFunction() {}",
+    "() => {}",
+    "const myFunction = () => {}",
+    "All of the above"
+    ],
+    "answer": "() => {}"
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of using an arrow function with the 'map' method to create a new array:",
+    "code": "const numbers = [1, 2, 3, 4, 5];\nconst doubledNumbers = numbers.map((number) => number * 2);\nconsole.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]"
+    },
+    {
+    "type": "funFact",
+    "text": "Arrow functions cannot be used as constructors and do not have a prototype property."
+    },
+    {
+    "type": "quiz",
+    "question": "What is the main benefit of using arrow functions?",
+    "options": [
+    "They are shorter to write",
+    "They are faster to execute",
+    "They have a better 'this' binding",
+    "They have more features than regular functions"
+    ],
+    "answer": "They have a better 'this' binding"
+    }
+    ]
+    }

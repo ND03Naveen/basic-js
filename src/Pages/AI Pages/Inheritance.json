@@ -1,0 +1,65 @@
+{
+    "topic": "Inheritance in JavaScript",
+    "content": [
+    {
+    "type": "paragraph",
+    "text": "Inheritance is a fundamental concept in object-oriented programming that allows one class to inherit properties and methods from another class."
+    },
+    {
+    "type": "funFact",
+    "text": "JavaScript is a prototype-based language, which means it doesn't have traditional classes like other object-oriented languages such as Java or C++. However, it has its own way of achieving inheritance through prototypes."
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of creating a parent class using a constructor function and adding a method to its prototype:",
+    "code": "function Animal(name) {\n this.name = name;\n}\n\nAnimal.prototype.walk = function() {\n console.log(this.name + ' is walking');\n};"
+    },
+    {
+    "type": "quiz",
+    "question": "What is a constructor function in JavaScript?",
+    "options": [
+    "A function that constructs an object",
+    "A function that destructs an object",
+    "A function that creates an object",
+    "A function that deletes an object"
+    ],
+    "answer": "A function that constructs an object"
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of creating a child class that inherits from the parent class and adds its own method:",
+    "code": "function Dog(name, breed) {\n Animal.call(this, name);\n this.breed = breed;\n}\n\nDog.prototype = Object.create(Animal.prototype);\nDog.prototype.constructor = Dog;\n\nDog.prototype.bark = function() {\n console.log(this.name + ' is barking');\n};"
+    },
+    {
+    "type": "quiz",
+    "question": "What does the 'Object.create' method do in JavaScript?",
+    "options": [
+    "It creates a new object and sets its prototype to the specified object",
+    "It creates a new object and sets its constructor to the specified function",
+    "It creates a new object and sets its properties to the specified values",
+    "It creates a new object and adds it to the specified array"
+    ],
+    "answer": "It creates a new object and sets its prototype to the specified object"
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of creating an instance of the child class and calling its inherited method and its own method:",
+    "code": "const myDog = new Dog('Buddy', 'Labrador');\n\nmyDog.walk();\nmyDog.bark();"
+    },
+    {
+    "type": "funFact",
+    "text": "ES6 introduced a new syntax for creating classes in JavaScript that makes it easier to achieve inheritance and encapsulation, although it still uses prototypes under the hood."
+    },
+    {
+    "type": "quiz",
+    "question": "What is the new syntax for creating classes in ES6?",
+    "options": [
+    "class MyClass { /* class definition / }",
+    "function MyClass() { / class definition / }",
+    "const MyClass = { / class definition / }",
+    "MyClass = new Class() { / class definition / }"
+    ],
+    "answer": "class MyClass { / class definition */ }"
+    }
+    ]
+    }

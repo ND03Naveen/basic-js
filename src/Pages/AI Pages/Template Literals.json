@@ -1,0 +1,49 @@
+{
+    "topic": "Template Literals in JavaScript",
+    "content": [
+    {
+    "type": "paragraph",
+    "text": "Template literals provide a more flexible way to work with strings in JavaScript compared to the traditional string concatenation using the '+' operator."
+    },
+    {
+    "type": "funFact",
+    "text": "Template literals were introduced in ES6 (ECMAScript 2015) and are also known as template strings."
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of a template literal:",
+    "code": "const name = 'Alice';\nconsole.log(Hello, my name is ${name});"
+    },
+    {
+    "type": "quiz",
+    "question": "What is a template literal?",
+    "options": [
+    "A type of variable in JavaScript",
+    "A way to format numbers in JavaScript",
+    "A more flexible way to work with strings in JavaScript",
+    "A type of function in JavaScript"
+    ],
+    "answer": "A more flexible way to work with strings in JavaScript"
+    },
+    {
+    "type": "code",
+    "text": "Template literals can also be used for multi-line strings. Here's an example:",
+    "code": "console.log(This is a\nmulti-line\nstring);"
+    },
+    {
+    "type": "funFact",
+    "text": "In template literals, you can use any valid JavaScript expression inside the ${} placeholder."
+    },
+    {
+    "type": "quiz",
+    "question": "What can be used inside the ${} placeholder in a template literal?",
+    "options": [
+    "Only string literals",
+    "Only variables",
+    "Any valid JavaScript expression",
+    "Only mathematical expressions"
+    ],
+    "answer": "Any valid JavaScript expression"
+    }
+    ]
+    }

@@ -1,0 +1,69 @@
+{
+    "topic": "Error Handling in JavaScript",
+    "content": [
+    {
+    "type": "paragraph",
+    "text": "Error handling is a critical part of any JavaScript program. It's important to be able to identify and handle errors that occur during runtime to ensure that the program runs smoothly and does not crash."
+    },
+    {
+    "type": "funFact",
+    "text": "In JavaScript, errors can be thrown using the 'throw' statement, and they can be caught and handled using the 'try...catch' statement."
+    },
+    {
+    "type": "code",
+    "text": "Here is an example of throwing an error:",
+    "code": "function divide(a, b) {\n if (b === 0) {\n throw new Error('Cannot divide by zero');\n }\n return a / b;\n}"
+    },
+    {
+    "type": "quiz",
+    "question": "What is the purpose of the 'try...catch' statement?",
+    "options": [
+    "To throw an error",
+    "To handle an error",
+    "To ignore an error",
+    "To create an error"
+    ],
+    "answer": "To handle an error"
+    },
+    {
+    "type": "code",
+    "text": "Here is an example of catching an error:",
+    "code": "function divide(a, b) {\n try {\n if (b === 0) {\n throw new Error('Cannot divide by zero');\n }\n return a / b;\n } catch (err) {\n console.log(err.message);\n }\n}"
+    },
+    {
+    "type": "funFact",
+    "text": "JavaScript also provides several built-in error types, such as 'SyntaxError', 'TypeError', and 'RangeError', that can be thrown and caught to handle specific types of errors."
+    },
+    {
+    "type": "quiz",
+    "question": "What is a common use case for the 'RangeError'?",
+    "options": [
+    "Handling errors related to invalid types",
+    "Handling errors related to invalid syntax",
+    "Handling errors related to out-of-range values",
+    "Handling errors related to missing properties"
+    ],
+    "answer": "Handling errors related to out-of-range values"
+    },
+    {
+    "type": "code",
+    "text": "Here is an example of throwing a 'TypeError':",
+    "code": "function greet(name) {\n if (typeof name !== 'string') {\n throw new TypeError('Name must be a string');\n }\n console.log(Hello, ${name}!);\n}"
+    },
+    {
+    "type": "funFact",
+    "text": "The 'finally' block can be used in conjunction with 'try...catch' to execute code that should always run, regardless of whether an error was thrown or not."
+    },
+    {
+    "type": "quiz",
+    "question": "What is the purpose of the 'finally' block?",
+    "options": [
+    "To throw an error",
+    "To catch an error",
+    "To ignore an error",
+    "To execute code that should always run"
+    ],
+    "answer": "To execute code that should always run"
+    }
+    ]
+    }
