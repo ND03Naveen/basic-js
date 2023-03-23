@@ -35,6 +35,7 @@ import Conditionals from "./Pages/AI Pages/Conditionals.json";
 import Loops from "./Pages/AI Pages/Loops.json";
 import Arrays from "./Pages/AI Pages/Arrays.json";
 import Functions from "./Pages/AI Pages/Functions.json";
+import Recursive from "./Pages/AI Pages/Recursive.json";
 import Objects from "./Pages/AI Pages/Objects.json";
 import Events from "./Pages/AI Pages/Events.json";
 import DOMManipulation from "./Pages/AI Pages/DOM Manipulation.json";
@@ -58,6 +59,11 @@ import Modules from "./Pages/AI Pages/Modules.json";
 import AsynchronousProgramming from "./Pages/AI Pages/Asynchronous Programming.json";
 import WebAPIs from "./Pages/AI Pages/Web APIs.json";
 import ThirdpartyLibraries from "./Pages/AI Pages/Third-party Libraries.json";
+import Strings from "./Pages/AI Pages/Strings.json";
+import Generators from "./Pages/AI Pages/Generators.json";
+import Symbol from "./Pages/AI Pages/Symbol.json";
+import SetsAndMaps from "./Pages/AI Pages/SetsAndMaps.json";
+
 function RouterComponent() {
     
     return (
@@ -94,6 +100,7 @@ function RouterComponent() {
                 <Route path="/Loops" element={<AiPages commentID={"97c3dacd_1679250414"} data={Loops}/>}></Route>
                 <Route path="/Arrays" element={<AiPages commentID={"d8fad8b4_1679250437"} data={Arrays}/>}></Route>
                 <Route path="/Functions" element={<AiPages commentID={"1785f83f_1679250462"} data={Functions}/>}></Route>
+                <Route path="/Recursive" element={<AiPages commentID={"03b6fd1f_1679593875"} data={Recursive}/>}></Route>
                 <Route path="/Objects" element={<AiPages commentID={"c06c67cc_1679250492"} data={Objects}/>}></Route>
                 <Route path="/Events" element={<AiPages commentID={"de506834_1679250517"} data={Events}/>}></Route>
                 <Route path="/DOM Manipulation" element={<AiPages commentID={"4e7d90f8_1679250545"} data={DOMManipulation}/>}></Route>
@@ -117,6 +124,10 @@ function RouterComponent() {
                 <Route path="/Asynchronous Programming" element={<AiPages commentID={"5c57954d_1679251193"} data={AsynchronousProgramming}/>}></Route>
                 <Route path="/Web APIs" element={<AiPages commentID={"7f14f58d_1679251230"} data={WebAPIs}/>}></Route>
                 <Route path="/Third-party Libraries" element={<AiPages commentID={"b01b0727_1679251257"} data={ThirdpartyLibraries}/>}></Route>
+                <Route path="/Strings" element={<AiPages commentID={"ddeba7b9_1679570208"} data={Strings}/>}></Route>
+                <Route path="/Generators" element={<AiPages commentID={"683a40ab_1679593933"} data={Generators}/>}></Route>
+                <Route path="/Symbol" element={<AiPages commentID={"e1d2e6f0_1679593932"} data={Symbol}/>}></Route>
+                <Route path="/Sets And Maps" element={<AiPages commentID={"b21664a5_1679593924"} data={SetsAndMaps}/>}></Route>
                 <Route path="/undefined" element={<p>No results found for your search term.</p>}></Route>
                 <Route path="/contactUs" element={<ContactUs />}></Route> 
                 <Route path="/terms" element={<Terms />}></Route> 

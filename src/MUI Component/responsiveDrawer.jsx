@@ -124,6 +124,9 @@ function ResponsiveDrawer(props) {
         {
             "label": "Loops",
             "link": "/Loops"
+        },{
+            "label": "Strings",
+            "link": "/Strings"
         },
         {
             "label": "Arrays",
@@ -132,6 +135,10 @@ function ResponsiveDrawer(props) {
         {
             "label": "Functions",
             "link": "/Functions"
+        },
+        {
+            "label": "Recursive",
+            "link": "/Recursive"
         },
         {
             "label": "Objects",
@@ -224,6 +231,18 @@ function ResponsiveDrawer(props) {
         {
             "label": "Third-party Libraries",
             "link": "/Third-party%20Libraries"
+        },
+        {
+            "label": "Generators",
+            "link": "/Generators"
+        },
+        {
+            "label": "Symbol",
+            "link": "/Symbol"
+        },
+        {
+            "label": "Sets And Maps",
+            "link": "/Sets%20And%20Maps"
         }
     ])
     const handleDrawerToggle = () => {
@@ -243,7 +262,7 @@ function ResponsiveDrawer(props) {
     }, [])
     const handleActiveMenu = (link) => {
         let menu = menus.map(val => {
-            if (val.link === link) val["isActive"] = true;
+            if (val.link === link || val.label === link) val["isActive"] = true;
             else val["isActive"] = false;
             return val
         })
@@ -375,7 +394,7 @@ function ResponsiveDrawer(props) {
                 </Box>
                 <Box
                     component="main"
-                    sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+                    sx={{ flexGrow: 1, p: 3, width: "100vw" }}
                 >
                     <Toolbar />
                     <BodyContext.Provider value={{ handleActiveMenu: handleActiveMenu ,menus:menus}}>

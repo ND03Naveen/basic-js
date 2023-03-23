@@ -48,12 +48,17 @@
     {
     "type": "code",
     "text": "Here is an example of throwing a 'TypeError':",
-    "code": "function greet(name) {\n if (typeof name !== 'string') {\n throw new TypeError('Name must be a string');\n }\n console.log(Hello, ${name}!);\n}"
+    "code": "function greet(name) {\n if (typeof name !== 'string') {\n throw new TypeError('Name must be a string');\n }\n console.log(`Hello, ${name}!`);\n}"
     },
     {
     "type": "funFact",
     "text": "The 'finally' block can be used in conjunction with 'try...catch' to execute code that should always run, regardless of whether an error was thrown or not."
     },
+    {
+        "type": "code",
+        "text": "Example:",
+        "code": "try {\n const x = 1;\n const y = 0;\n const result = x / y;\n console.log(result);\n} catch (error) {\n console.log(\"An error occurred: \" + error.message);\n} finally {\n console.log(\"This code will always run.\");\n}"
+        },
     {
     "type": "quiz",
     "question": "What is the purpose of the 'finally' block?",

@@ -33,7 +33,12 @@
     {
     "type": "funFact",
     "text": "The JSON format is often used for data exchange between server and client in AJAX applications, but it can also be used as a data storage format for NoSQL databases like MongoDB."
-    },
+    },    
+    {
+        "type": "code",
+        "text": "Here is an example of how to convert a JavaScript object to a JSON string:",
+        "code": "const obj = {\n name: \"John\",\n age: 30,\n city: \"New York\"\n};\nconst jsonString = JSON.stringify(obj);"
+        },
     {
     "type": "quiz",
     "question": "What is the purpose of JSON.stringify()?",
@@ -44,11 +49,6 @@
     "To deserialize a JSON string"
     ],
     "answer": "To convert a JavaScript object to a JSON string"
-    },
-    {
-    "type": "code",
-    "text": "Here is an example of how to convert a JavaScript object to a JSON string:",
-    "code": "const obj = {\n name: \"John\",\n age: 30,\n city: \"New York\"\n};\nconst jsonString = JSON.stringify(obj);"
     },
     {
     "type": "funFact",

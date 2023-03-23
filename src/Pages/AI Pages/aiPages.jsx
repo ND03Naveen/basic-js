@@ -50,7 +50,7 @@ const FunFact = ({ text }) => {
 };
 
 const List = ({ items }) => (
-    <ul className="list">
+    <ul className="list" style={{marginBottom:"20px"}}>
         {items.map((item, index) => (
             <li className="list__item" key={index}>
                 <span className="list__item__label keywords">{item.split(":")[0]}:</span>
@@ -78,7 +78,8 @@ const AiPages = ({ data,commentID }) => {
         }
     }, [data.topic])
 
-    const scrollToTop = () => {
+    const scrollToTop = (link) => {
+        bodyContext.handleActiveMenu(link);
         document.documentElement.scrollTop = 0;
     }
     return (
@@ -114,7 +115,7 @@ const AiPages = ({ data,commentID }) => {
             <Grid container style={{ justifyContent: "space-between" }}>
                 <Grid item >
                     <Tooltip title={previous} placement={"right"} aria-label={previous}>
-                        <Button onClick={previous ? scrollToTop : null} disabled={!previous}>
+                        <Button onClick={previous ? ()=>scrollToTop("/" + previous) : null} disabled={!previous}>
                             <Link key={previous} to={"/" + previous} style={{ textDecoration: "none", color: "inherit" }}>
                                 <SkipPreviousIcon className={previous ? 'naviagationBtn' : 'disableNavigationBtn'} />
                             </Link>
@@ -123,7 +124,7 @@ const AiPages = ({ data,commentID }) => {
                 </Grid>
                 <Grid item >
                     <Tooltip title={next} placement={"left"} aria-label={next}>
-                        <Button onClick={next ? scrollToTop : null} disabled={!next}>
+                        <Button onClick={next ? ()=>scrollToTop("/" + next)  : null} disabled={!next}>
                             <Link varient="button" key={next} to={"/" + next} style={{ textDecoration: "none", color: "inherit" }}>
                                 <SkipNextIcon className={next ? 'naviagationBtn' : 'disableNavigationBtn'} /> 
                             </Link>

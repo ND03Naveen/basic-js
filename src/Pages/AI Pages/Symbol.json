@@ -1,0 +1,38 @@
+{
+    "topic": "Symbol in JavaScript",
+    "content": [
+    {
+    "type": "paragraph",
+    "text": "Symbol is a new primitive type in JavaScript that allows for the creation of unique object keys. It was introduced in ES6 and is often used to define private properties and methods in objects."
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of creating a symbol:",
+    "code": "const mySymbol = Symbol();"
+    },
+    {
+    "type": "funFact",
+    "text": "Symbols cannot be coerced into strings and have a unique identity, meaning that two symbols with the same description are still considered different symbols."
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of using a symbol as a property key:",
+    "code": "const mySymbol = Symbol('mySymbol');\nconst myObject = {};\nmyObject[mySymbol] = 'Hello World';\nconsole.log(myObject[mySymbol]); // Output: 'Hello World'"
+    },
+    {
+    "type": "quiz",
+    "question": "What is the purpose of using symbols in JavaScript?",
+    "options": [
+    "To create unique object keys",
+    "To make objects immutable",
+    "To define private properties and methods",
+    "To speed up code execution"
+    ],
+    "answer": "To create unique object keys"
+    },
+    {
+    "type": "funFact",
+    "text": "JavaScript has several built-in symbols, such as Symbol.iterator, which is used by the for...of loop to iterate over objects."
+    }
+    ]
+    }

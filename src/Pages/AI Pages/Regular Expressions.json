@@ -19,6 +19,11 @@
     "text": "This regular expression matches a string that represents a social security number in the format of XXX-XX-XXXX, where X is a digit from 0-9. The backslashes before the d's indicate that we want to match a digit, and the curly braces indicate the number of digits we want to match."
     },
     {
+    "type": "code",
+    "text": "Here is an example of using the test() method:",
+    "code": "const regex = /\\d{3}-\\d{2}-\\d{4}/;\nconst ssn = '123-45-6789';\nconst result = regex.test(ssn);\nconsole.log(result); // true"
+    },
+    {
     "type": "quiz",
     "question": "What is the purpose of the test() method in JavaScript regular expressions?",
     "options": [
@@ -28,11 +33,6 @@
     "To test whether a regular expression matches a string"
     ],
     "answer": "To test whether a regular expression matches a string"
-    },
-    {
-    "type": "code",
-    "text": "Here is an example of using the test() method:",
-    "code": "const regex = /\\d{3}-\\d{2}-\\d{4}/;\nconst ssn = '123-45-6789';\nconst result = regex.test(ssn);\nconsole.log(result); // true"
     },
     {
     "type": "funFact",

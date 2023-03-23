@@ -1,49 +1,54 @@
 {
     "topic": "Arrays in JavaScript",
     "content": [
-    {
-    "type": "paragraph",
-    "text": "Arrays are a fundamental data structure in JavaScript. They are used to store and manipulate collections of data, such as a list of numbers or a set of strings."
-    },
-    {
-    "type": "funFact",
-    "text": "Arrays in JavaScript are dynamic, which means they can grow or shrink as needed, unlike arrays in some other programming languages."
-    },
-    {
-    "type": "code",
-    "text": "Here's an example of how to create an array in JavaScript:",
-    "code": "const numbers = [1, 2, 3, 4, 5];"
-    },
-    {
-    "type": "quiz",
-    "question": "What is an array in JavaScript?",
-    "options": [
-    "A data structure used to store and manipulate collections of data",
-    "A type of function in JavaScript",
-    "A built-in object in JavaScript that cannot be modified",
-    "A reserved word in JavaScript that cannot be used as a variable name"
-    ],
-    "answer": "A data structure used to store and manipulate collections of data"
-    },
-    {
-    "type": "code",
-    "text": "Here's an example of how to access an element in an array:",
-    "code": "const numbers = [1, 2, 3, 4, 5];\nconsole.log(numbers[2]); // Output: 3"
-    },
-    {
-    "type": "funFact",
-    "text": "Arrays in JavaScript can store different types of data, including numbers, strings, and even other arrays."
-    },
-    {
-    "type": "quiz",
-    "question": "How do you add an element to the end of an array in JavaScript?",
-    "options": [
-    "push()",
-    "add()",
-    "append()",
-    "insert()"
-    ],
-    "answer": "push()"
-    }
+        {
+            "type": "paragraph",
+            "text": "Arrays are a fundamental data structure in JavaScript. They are used to store and manipulate collections of data, such as a list of numbers or a set of strings."
+        },
+        {
+            "type": "funFact",
+            "text": "Arrays in JavaScript are dynamic, which means they can grow or shrink as needed, unlike arrays in some other programming languages."
+        },
+        {
+            "type": "code",
+            "text": "Here's an example of how to create an array in JavaScript:",
+            "code": "const numbers = [1, 2, 3, 4, 5];"
+        },
+        {
+            "type": "quiz",
+            "question": "What is an array in JavaScript?",
+            "options": [
+                "A data structure used to store and manipulate collections of data",
+                "A type of function in JavaScript",
+                "A built-in object in JavaScript that cannot be modified",
+                "A reserved word in JavaScript that cannot be used as a variable name"
+            ],
+            "answer": "A data structure used to store and manipulate collections of data"
+        },
+        {
+            "type": "code",
+            "text": "Here's an example of how to access an element in an array:",
+            "code": "const numbers = [1, 2, 3, 4, 5];\nconsole.log(numbers[2]); // Output: 3"
+        },
+        {
+            "type": "funFact",
+            "text": "Arrays in JavaScript can store different types of data, including numbers, strings, and even other arrays."
+        },
+        {
+            "type": "code",
+            "text": "Here are some basic Array methods in JavaScript:",
+            "code": "const arr = [1, 2, 3, 4, 5];\n\n// length: returns the length of the array\nconst length = arr.length;\n\n// push: adds an element to the end of the array and returns the new length\nconst newLength = arr.push(6);\n\n// pop: removes the last element from the array and returns it\nconst lastElement = arr.pop();\n\n// unshift: adds an element to the beginning of the array and returns the new length\nconst newLength2 = arr.unshift(0);\n\n// shift: removes the first element from the array and returns it\nconst firstElement = arr.shift();\n\n// slice: returns a new array that contains a portion of the original array\nconst slicedArray = arr.slice(2, 4);\n\n// splice: removes or replaces elements from the array and returns the removed elements\nconst removedElements = arr.splice(1, 2, 'a', 'b', 'c');\n\n// forEach: executes a provided function once for each array element\nnumbers.forEach((number) => console.log(number));\n\n// map: creates a new array with the results of calling a provided function on every element in the array\nconst doubled = numbers.map((number) => number * 2);\n\n// filter: creates a new array with all elements that pass the test implemented by the provided function\nconst filtered = numbers.filter((number) => number > 3);\n\n// reduce: applies a function against an accumulator and each element in the array to reduce it to a single value\nconst reduced = numbers.reduce((accumulator, currentValue) => accumulator + currentValue);"
+        },
+        {
+            "type": "quiz",
+            "question": "How do you add an element to the end of an array in JavaScript?",
+            "options": [
+                "push()",
+                "add()",
+                "append()",
+                "insert()"
+            ],
+            "answer": "push()"
+        }
     ]
-    }
+}

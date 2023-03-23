@@ -1,49 +1,54 @@
 {
     "topic": "Conditionals in JavaScript",
     "content": [
-    {
-    "type": "paragraph",
-    "text": "Conditionals are used in JavaScript to execute different blocks of code based on a certain condition. They are an essential tool for making your code more flexible and dynamic."
-    },
-    {
-    "type": "funFact",
-    "text": "There are two main types of conditionals in JavaScript: the if statement and the switch statement."
-    },
-    {
-    "type": "code",
-    "text": "Here's an example of an if statement in JavaScript:",
-    "code": "let num = 10;\nif (num > 0) {\n console.log('The number is positive.');\n}"
-    },
-    {
-    "type": "quiz",
-    "question": "What is the purpose of a conditional statement in JavaScript?",
-    "options": [
-    "To execute different blocks of code based on a certain condition",
-    "To define a function in JavaScript",
-    "To assign a value to a variable in JavaScript",
-    "To create an object in JavaScript"
-    ],
-    "answer": "To execute different blocks of code based on a certain condition"
-    },
-    {
-    "type": "code",
-    "text": "Here's an example of a switch statement in JavaScript:",
-    "code": "let day = 'Monday';\nswitch (day) {\n case 'Monday':\n console.log('Today is Monday.');\n break;\n case 'Tuesday':\n console.log('Today is Tuesday.');\n break;\n default:\n console.log('Today is not Monday or Tuesday.');\n}"
-    },
-    {
-    "type": "funFact",
-    "text": "In JavaScript, you can use the else if statement to specify additional conditions to check if the initial if statement is false."
-    },
-    {
-    "type": "quiz",
-    "question": "What is the purpose of the else if statement in JavaScript?",
-    "options": [
-    "To specify additional conditions to check if the initial if statement is false",
-    "To execute a different block of code if the initial if statement is true",
-    "To exit the conditional statement immediately",
-    "To skip the current iteration of the loop"
-    ],
-    "answer": "To specify additional conditions to check if the initial if statement is false"
-    }
+        {
+            "type": "paragraph",
+            "text": "Conditionals are used in JavaScript to execute different blocks of code based on a certain condition. They are an essential tool for making your code more flexible and dynamic."
+        },
+        {
+            "type": "funFact",
+            "text": "There are two main types of conditionals in JavaScript: the if statement and the switch statement."
+        },
+        {
+            "type": "code",
+            "text": "Here's an example of an if statement in JavaScript:",
+            "code": "let num = 10;\nif (num > 0) {\n console.log('The number is positive.');\n}"
+        },
+        {
+            "type": "quiz",
+            "question": "What is the purpose of a conditional statement in JavaScript?",
+            "options": [
+                "To execute different blocks of code based on a certain condition",
+                "To define a function in JavaScript",
+                "To assign a value to a variable in JavaScript",
+                "To create an object in JavaScript"
+            ],
+            "answer": "To execute different blocks of code based on a certain condition"
+        },
+        {
+            "type": "code",
+            "text": "Here's an example of a switch statement in JavaScript:",
+            "code": "let day = 'Monday';\nswitch (day) {\n case 'Monday':\n console.log('Today is Monday.');\n break;\n case 'Tuesday':\n console.log('Today is Tuesday.');\n break;\n default:\n console.log('Today is not Monday or Tuesday.');\n}"
+        },
+        {
+            "type": "funFact",
+            "text": "In JavaScript, you can use the else if statement to specify additional conditions to check if the initial if statement is false."
+        },
+        {
+            "type": "code",
+            "text": "Here's an example of a else if statement in JavaScript:",
+            "code": "let x = 10;\n\nif (x < 5) {\n console.log('x is less than 5');\n} else if (x < 10) {\n console.log('x is less than 10');\n} else {\n console.log('x is greater than or equal to 10');\n}"
+        },
+        {
+            "type": "quiz",
+            "question": "What is the purpose of the else if statement in JavaScript?",
+            "options": [
+                "To specify additional conditions to check if the initial if statement is false",
+                "To execute a different block of code if the initial if statement is true",
+                "To exit the conditional statement immediately",
+                "To skip the current iteration of the loop"
+            ],
+            "answer": "To specify additional conditions to check if the initial if statement is false"
+        }
     ]
-    }
+}

@@ -1,0 +1,49 @@
+{
+    "topic": "Sets and Maps in JavaScript",
+    "content": [
+    {
+    "type": "paragraph",
+    "text": "Sets and Maps are new data structures in JavaScript that provide more efficient storage and retrieval of data."
+    },
+    {
+    "type": "funFact",
+    "text": "Sets are collections of unique values, while Maps are collections of key-value pairs."
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of creating a Set:",
+    "code": "const mySet = new Set([1, 2, 3, 4, 5]);"
+    },
+    {
+    "type": "quiz",
+    "question": "What is the main difference between Sets and Arrays?",
+    "options": [
+    "Sets can only store unique values",
+    "Arrays can only store primitive data types",
+    "Sets can only be iterated using for loops",
+    "Arrays can only be iterated using forEach loops"
+    ],
+    "answer": "Sets can only store unique values"
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of using a Map:",
+    "code": "const myMap = new Map();\nmyMap.set('key1', 'value1');\nmyMap.set('key2', 'value2');"
+    },
+    {
+    "type": "funFact",
+    "text": "Maps are often used to store and retrieve data in a more efficient way than using objects, especially when the keys are non-primitive data types."
+    },
+    {
+    "type": "quiz",
+    "question": "What is the main difference between Maps and Objects?",
+    "options": [
+    "Maps can only store key-value pairs of the same data type",
+    "Objects can only store primitive data types",
+    "Maps can have non-primitive data types as keys",
+    "Objects can only have string keys"
+    ],
+    "answer": "Maps can have non-primitive data types as keys"
+    }
+    ]
+    }

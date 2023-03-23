@@ -12,7 +12,7 @@
     {
     "type": "code",
     "text": "Here's an example of a template literal:",
-    "code": "const name = 'Alice';\nconsole.log(Hello, my name is ${name});"
+    "code": "const name = 'Alice';\nconsole.log(`Hello, my name is ${name}`);"
     },
     {
     "type": "quiz",
@@ -28,7 +28,7 @@
     {
     "type": "code",
     "text": "Template literals can also be used for multi-line strings. Here's an example:",
-    "code": "console.log(This is a\nmulti-line\nstring);"
+    "code": "console.log(`This is a\nmulti-line\nstring`);"
     },
     {
     "type": "funFact",

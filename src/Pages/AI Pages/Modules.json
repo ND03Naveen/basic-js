@@ -35,6 +35,11 @@
     "text": "You can also use the 'default' keyword when exporting a module to specify a default export for the module."
     },
     {
+    "type": "code",
+    "text": "Here's an example of using a default export:",
+    "code": "export default class Person {\n constructor(name) {\n this.name = name;\n }\n}"
+    },
+    {
     "type": "quiz",
     "question": "What is the 'default' keyword used for when exporting a module?",
     "options": [
@@ -44,11 +49,6 @@
     "There is no such keyword"
     ],
     "answer": "To specify a default export for the module"
-    },
-    {
-    "type": "code",
-    "text": "Here's an example of using a default export:",
-    "code": "export default class Person {\n constructor(name) {\n this.name = name;\n }\n}"
     }
     ]
     }

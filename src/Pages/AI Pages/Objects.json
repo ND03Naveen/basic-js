@@ -35,6 +35,11 @@
     "text": "In JavaScript, objects can be created using object literals, object constructors, and object prototypes."
     },
     {
+        "type": "code",
+        "text": "Example:",
+        "code": "const person1 = {\n firstName: \"John\",\n lastName: \"Doe\",\n age: 30,\n greeting: function() {\n console.log(Hello, my name is ${this.firstName} ${this.lastName} and I am ${this.age} years old.);\n }\n};\n\nfunction Person2(firstName, lastName, age) {\n this.firstName = firstName;\n this.lastName = lastName;\n this.age = age;\n this.greeting = function() {\n console.log(Hello, my name is ${this.firstName} ${this.lastName} and I am ${this.age} years old.);\n };\n}\n\nconst person2 = new Person2(\"Jane\", \"Doe\", 25);\n\nfunction Person3(firstName, lastName, age) {\n this.firstName = firstName;\n this.lastName = lastName;\n this.age = age;\n}\n\nPerson3.prototype.greeting = function() {\n console.log(Hello, my name is ${this.firstName} ${this.lastName} and I am ${this.age} years old.);\n};\n\nconst person3 = new Person3(\"Bob\", \"Smith\", 40);\n\nperson1.greeting();\nperson2.greeting();\nperson3.greeting();"
+        },
+    {
     "type": "quiz",
     "question": "What is an object constructor?",
     "options": [
@@ -45,11 +50,7 @@
     ],
     "answer": "A function that creates and returns an object"
     },
-    {
-    "type": "code",
-    "text": "Here is an example of an object constructor:",
-    "code": "function Person(name, age) {\n this.name = name;\n this.age = age;\n this.greet = function() {\n console.log(Hello, my name is ${this.name} and I'm ${this.age} years old.);\n };\n}\n\nconst john = new Person('John', 30);"
-    },
+    
     {
     "type": "funFact",
     "text": "JavaScript objects can have methods, which are functions that are stored as object properties."
