@@ -1,68 +1,142 @@
 {
     "topic": "Operators in JavaScript",
     "content": [
-    {
-    "type": "paragraph",
-    "text": "Operators are used in JavaScript to perform various types of operations on values, such as arithmetic, comparison, and logical operations."
-    },
-    {
-    "type": "funFact",
-    "text": "JavaScript has several different types of operators, including arithmetic operators, comparison operators, logical operators, and assignment operators."
-    },
-    {
-    "type": "code",
-    "text": "Here are some examples of arithmetic operators in JavaScript:",
-    "code": "let x = 10;\nlet y = 5;\nlet sum = x + y;\nlet difference = x - y;\nlet product = x * y;\nlet quotient = x / y;"
-    },
-    {
-    "type": "quiz",
-    "question": "What are arithmetic operators in JavaScript?",
-    "options": [
-    "Operators that perform mathematical operations on values",
-    "Operators that compare values",
-    "Operators that perform logical operations on values",
-    "Operators that assign values to variables"
-    ],
-    "answer": "Operators that perform mathematical operations on values"
-    },
-    {
-    "type": "code",
-    "text": "Here are some examples of comparison operators in JavaScript:",
-    "code": "let x = 10;\nlet y = 5;\nlet z = 10;\n\nconsole.log(x > y);\nconsole.log(x < y);\nconsole.log(x >= z);\nconsole.log(x == y);\nconsole.log(x != y);"
-    },
-    {
-    "type": "funFact",
-    "text": "In JavaScript, the === operator is used for strict equality comparison, which compares both the value and the data type of the operands."
-    },
-    {
-    "type": "quiz",
-    "question": "What is the difference between the == operator and the === operator in JavaScript?",
-    "options": [
-    "The == operator only compares the values of the operands, while the === operator compares both the value and the data type",
-    "The === operator only compares the values of the operands, while the == operator compares both the value and the data type",
-    "The == operator is used for assignment, while the === operator is used for comparison",
-    "The === operator is used for assignment, while the == operator is used for comparison"
-    ],
-    "answer": "The == operator only compares the values of the operands, while the === operator compares both the value and the data type"
-    },
-    {
-    "type": "code",
-    "text": "Here are some examples of logical operators in JavaScript:",
-    "code": "let x = 10;\nlet y = 5;\n\nconsole.log(x > 5 && y < 10);\nconsole.log(x > 5 || y > 10);\nconsole.log(!(x > 5));"
-    },
-    {
-    "type": "funFact",
-    "text": "In JavaScript, the && operator returns true if both operands are true, while the || operator returns true if at least one operand is true."
-    },
-    {
-    "type": "quiz",
-    "question": "What is the purpose of logical operators in JavaScript?",
-    "options": [
-    "To perform logical operations on boolean values",
-    "To perform mathematical operations on values",
-    "To assign values to variables",
-    "To compare values"
-    ],
-    "answer":"To perform logical operations on boolean values"}
-]
+        {
+            "type": "paragraph",
+            "text": "Operators are used in JavaScript to perform various types of operations on values, such as arithmetic, comparison, and logical operations."
+        },
+        {
+            "type": "funFact",
+            "text": "JavaScript has several different types of operators, including arithmetic operators, comparison operators, logical operators, and assignment operators."
+        },        
+        {
+            "type": "code",
+            "text": "Here are some examples of arithmetic operators in JavaScript:",
+            "code": "let x = 10;\nlet y = 5;\nlet sum = x + y;\nlet difference = x - y;\nlet product = x * y;\nlet quotient = x / y;\nlet remainder = x % y;"
+        },
+        {
+            "type": "quiz",
+            "question": "What are arithmetic operators in JavaScript?",
+            "options": [
+                "Operators that perform mathematical operations on values",
+                "Operators that compare values",
+                "Operators that perform logical operations on values",
+                "Operators that assign values to variables"
+            ],
+            "answer": "Operators that perform mathematical operations on values"
+        },
+        {
+            "type": "quiz",
+            "question": "What is the value of the variable 'sum' after executing the following code?",
+            "code": "let num1 = 10;\nlet num2 = 20;\nlet sum = num1 + num2;",
+            "options": [
+              "10",
+              "20",
+              "30",
+              "40"
+            ],
+            "answer": "30"
+          },                                                 
+        {
+            "type": "code",
+            "text": "Here are some examples of comparison operators in JavaScript:",
+            "code": "let x = 10;\nlet y = 5;\nlet z = 10;\n\nconsole.log(x > y);\nconsole.log(x < y);\nconsole.log(x >= z);\nconsole.log(x == y);\nconsole.log(x != y);"
+        },
+        {
+            "type": "funFact",
+            "text": "In JavaScript, the === operator is used for strict equality comparison, which compares both the value and the data type of the operands."
+        },
+        {
+            "type": "quiz",
+            "question": "What is the difference between the == operator and the === operator in JavaScript?",
+            "options": [
+                "The == operator only compares the values of the operands, while the === operator compares both the value and the data type",
+                "The === operator only compares the values of the operands, while the == operator compares both the value and the data type",
+                "The == operator is used for assignment, while the === operator is used for comparison",
+                "The === operator is used for assignment, while the == operator is used for comparison"
+            ],
+            "answer": "The == operator only compares the values of the operands, while the === operator compares both the value and the data type"
+        },
+        {
+            "type": "code",
+            "text": "Here are some examples of logical operators in JavaScript:",
+            "code": "let x = 10;\nlet y = 5;\n\nconsole.log(x > 5 && y < 10);\nconsole.log(x > 5 || y > 10);\nconsole.log(!(x > 5));"
+        },
+        {
+            "type": "funFact",
+            "text": "In JavaScript, the && operator returns true if both operands are true, while the || operator returns true if at least one operand is true."
+        },
+        {
+            "type": "quiz",
+            "question": "What is the purpose of logical operators in JavaScript?",
+            "options": [
+                "To perform logical operations on boolean values",
+                "To perform mathematical operations on values",
+                "To assign values to variables",
+                "To compare values"
+            ],
+            "answer": "To perform logical operations on boolean values"
+        },                        
+        {
+            "type": "paragraph",
+            "text": "The assignment operator in JavaScript is denoted by the equals sign (=) and is used to assign a value to a variable. For example, 'x = 5' assigns the value 5 to the variable x."
+        },
+        {
+            "type": "funFact",
+            "text": "The assignment operator can also be used in combination with arithmetic operators to update the value of a variable. For example, 'x += 5' is equivalent to 'x = x + 5'."
+        },
+        {
+            "type": "code",
+            "text": "Here are some examples of using the assignment operator in JavaScript:",
+            "code": "let x = 10;\nlet y = 5;\n\nx = y;\nconsole.log(x); // Output: 5\n\nx += y;\nconsole.log(x); // Output: 10\n\nx -= y;\nconsole.log(x); // Output: 5\n\nx *= y;\nconsole.log(x); // Output: 25\n\nx /= y;\nconsole.log(x); // Output: 5"
+        },
+        {
+            "type": "quiz",
+            "question": "What is the assignment operator in JavaScript used for?",
+            "options": [
+                "To assign a value to a variable",
+                "To compare values",
+                "To perform logical operations on values",
+                "To increment a variable by 1"
+            ],
+            "answer": "To assign a value to a variable"
+        },
+        {
+            "type":"scenario1",
+            "data":[
+                {
+                  "category": "Arithmetic operators",
+                  "examples": [
+                    "A calculator application that performs addition, subtraction, multiplication, and division.",
+                    "A shopping cart application that calculates the total price of items based on their quantity and unit price.",
+                    "A fitness tracking application that calculates the number of calories burned during a workout based on the user's weight and duration of the activity."
+                  ]
+                },
+                {
+                  "category": "Comparison operators",
+                  "examples": [
+                    "A login form that checks whether the username and password entered by the user match the ones stored in the database.",
+                    "An e-commerce application that checks whether a coupon code entered by the user is valid and applicable to the current order.",
+                    "A weather application that checks whether the current temperature is above or below a certain threshold and displays an appropriate message."
+                  ]
+                },
+                {
+                  "category": "Logical operators",
+                  "examples": [
+                    "A music streaming application that allows the user to search for songs by artist, album, or genre.",
+                    "A social media application that allows the user to filter their newsfeed by type of content, such as photos, videos, or status updates.",
+                    "A search engine that allows the user to refine their query using logical operators such as AND, OR, and NOT."
+                  ]
+                },
+                {
+                  "category": "Assignment operators",
+                  "examples": [
+                    "An e-commerce application that stores the shipping address entered by the user in a variable for use in later stages of the checkout process.",
+                    "A game application that keeps track of the player's score and updates it using the += operator when they complete a level.",
+                    "A recipe application that allows the user to create and store their own recipes in an object using the = operator."
+                  ]
+                }
+              ]
+        }
+    ]
 }

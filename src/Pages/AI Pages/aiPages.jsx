@@ -7,6 +7,13 @@ import SkipNextIcon from '@mui/icons-material/SkipNext';
 import { Button, Grid, Tooltip } from '@mui/material';
 import { Link } from "react-router-dom";
 import { useBodyContext } from "../../MUI Component/responsiveDrawer";
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import Typography from '@mui/material/Typography';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+
 
 const Quiz = ({ question, options, answer, code }) => {
     const [selectedOption, setSelectedOption] = useState(null);
@@ -49,8 +56,8 @@ const FunFact = ({ text }) => {
     );
 };
 
-const List = ({ items }) => (
-    <ul className="list" style={{marginBottom:"20px"}}>
+const Lists = ({ items }) => (
+    <ul className="list" style={{ marginBottom: "20px" }}>
         {items.map((item, index) => (
             <li className="list__item" key={index}>
                 <span className="list__item__label keywords">{item.split(":")[0]}:</span>
@@ -59,7 +66,43 @@ const List = ({ items }) => (
         ))}
     </ul>
 );
-const AiPages = ({ data,commentID }) => {
+
+const Scenario = ({ data }) => {
+    const iconStyles = {
+        marginRight: '10px',
+        fontSize: '20px',
+    };
+
+    return (
+        <div>
+            <h2 style={{ textAlign: 'center' }}>Real Time Scenarios</h2>
+            <List>
+                {data.map((val, index) => (
+                    <ListItem key={index}>
+                        <ListItemIcon>
+                            <AccessTimeIcon style={iconStyles} />
+                        </ListItemIcon>
+                        <ListItemText>
+                            <Typography component="div">
+                                {val.category}
+                            </Typography>
+                            <Typography color="textSecondary" component="div">
+                                {val.examples.map((item, i) => (
+                                    <div key={i}>
+                                        <span style={{ fontWeight: 'bold' }}>{i + 1}. </span>
+                                        {item}
+                                    </div>
+                                ))}
+                            </Typography>
+                        </ListItemText>
+                    </ListItem>
+                ))}
+            </List>
+        </div>
+    );
+};
+const AiPages = ({ data, commentID }) => {
+    const [commentId,setcommentId] = useState(commentID);
     const bodyContext = useBodyContext();
     const [previous, setPrevious] = useState("");
     const [next, setNext] = useState("");
@@ -76,9 +119,11 @@ const AiPages = ({ data,commentID }) => {
                 break;
             }
         }
+        setcommentId(commentID);
     }, [data.topic])
 
     const scrollToTop = (link) => {
+        setcommentId(null);
         bodyContext.handleActiveMenu(link);
         document.documentElement.scrollTop = 0;
     }
@@ -94,7 +139,9 @@ const AiPages = ({ data,commentID }) => {
                     case 'quiz':
                         return <Quiz question={item.question} options={item.options} answer={item.answer} code={item.code} />
                     case 'list':
-                        return <List items={item.items} />
+                        return <Lists items={item.items} />
+                    case 'scenario':
+                        return <Scenario data={item.data} />
                     case 'code':
                         return item.code ?
                             (
@@ -115,7 +162,7 @@ const AiPages = ({ data,commentID }) => {
             <Grid container style={{ justifyContent: "space-between" }}>
                 <Grid item >
                     <Tooltip title={previous} placement={"right"} aria-label={previous}>
-                        <Button onClick={previous ? ()=>scrollToTop("/" + previous) : null} disabled={!previous}>
+                        <Button onClick={previous ? () => scrollToTop("/" + previous) : null} disabled={!previous}>
                             <Link key={previous} to={"/" + previous} style={{ textDecoration: "none", color: "inherit" }}>
                                 <SkipPreviousIcon className={previous ? 'naviagationBtn' : 'disableNavigationBtn'} />
                             </Link>
@@ -124,16 +171,16 @@ const AiPages = ({ data,commentID }) => {
                 </Grid>
                 <Grid item >
                     <Tooltip title={next} placement={"left"} aria-label={next}>
-                        <Button onClick={next ? ()=>scrollToTop("/" + next)  : null} disabled={!next}>
+                        <Button onClick={next ? () => scrollToTop("/" + next) : null} disabled={!next}>
                             <Link varient="button" key={next} to={"/" + next} style={{ textDecoration: "none", color: "inherit" }}>
-                                <SkipNextIcon className={next ? 'naviagationBtn' : 'disableNavigationBtn'} /> 
+                                <SkipNextIcon className={next ? 'naviagationBtn' : 'disableNavigationBtn'} />
                             </Link>
                         </Button>
                     </Tooltip>
                 </Grid>
             </Grid>
             {/* comment */}
-            {commentID?<div className="powr-comments" id={commentID}></div>:null}
+            {commentId ? <div className="powr-comments" id={commentId}></div> : null}
         </div>
     );
 
