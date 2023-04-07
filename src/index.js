@@ -10,11 +10,7 @@ const currentLocation = window.location;
 root.render(
   <React.StrictMode>
     <BrowserRouter>        
-         {currentLocation.pathname==='/ads.txt'? <iframe
-            title="ads.txt file"
-            src="/ads.txt"
-            style={{ width: '100%', height: '100vh', border: 'none' }}
-          />:
+         {currentLocation.pathname==='/ads.txt'? <pre>{"google.com, pub-9343290922292627, DIRECT, f08c47fec0942fa0"}</pre>:
         <App/>}
     </BrowserRouter>
   </React.StrictMode>
