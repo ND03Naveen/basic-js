@@ -63,6 +63,7 @@ import Strings from "./Pages/AI Pages/Strings.json";
 import Generators from "./Pages/AI Pages/Generators.json";
 import Symbol from "./Pages/AI Pages/Symbol.json";
 import SetsAndMaps from "./Pages/AI Pages/SetsAndMaps.json";
+import Home from "./Excercise/home"
 
 function RouterComponent() {
     
@@ -92,7 +93,7 @@ function RouterComponent() {
                 <Route path="/regex" element={<RegEx />}></Route>
                 <Route path="/integration" element={<Integration />}></Route> 
                 <Route path="/HtmlDOM" element={<HtmlDOM />}></Route>    */}
-                <Route path="/" element={<AiPages commentID={"c04f17ea_1679249956"} data={IntroductionToJavaScript}/>}></Route>
+                {/* <Route path="/" element={<Home/>}></Route> */}
                 <Route path="/Introduction to JavaScript" element={<AiPages commentID={"c04f17ea_1679249956"} data={IntroductionToJavaScript}/>}></Route>
                 <Route path="/Variables and Data Types" element={<AiPages commentID={"df0aa12a_1679250331"} data={VariablesAndDatatypes}/>}></Route>
                 <Route path="/Operators" element={<AiPages commentID={"48d46fcc_1679250360"} data={Operators}/>}></Route>
