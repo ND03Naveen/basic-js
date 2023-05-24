@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {  createBrowserRouter,  RouterProvider,} from "react-router-dom";
+import {  createBrowserRouter,  RouterProvider,HashRouter} from "react-router-dom";
 import Home from './Excercise/home';
 
 const router = createBrowserRouter([
@@ -21,7 +21,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const currentLocation = window.location;
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <HashRouter>
+    <App/>
+    </HashRouter>
   </React.StrictMode>
 );
 
