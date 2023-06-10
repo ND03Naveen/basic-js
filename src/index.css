@@ -44,7 +44,7 @@ p {
 }
 
 .primaryColor {
-  color: #55ac8f;
+  color: #00bfa5;
 }
 
 .greyBlack {
@@ -53,5 +53,5 @@ p {
 
 .buttonStyle {
   color: white !important;
-  background: #55ac8f !important;
+  background: #00bfa5 !important;
 }

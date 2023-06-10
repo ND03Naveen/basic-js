@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 export default function MultiActionAreaCard({ name, output, link }) {
   return (
-    <Card sx={{ maxWidth: 345, minWidth: 345 }} style={{ marginBottom: "20px", boxShadow: "0px 2px 1px -1px #55ac8f, 0px 1px 1px 0px #55ac8f, 0px 1px 3px 0px #55ac8f" }}>
+    <Card sx={{ maxWidth: 345, minWidth: 345 }} style={{ marginBottom: "20px", boxShadow: "0px 2px 1px -1px #00bfa5, 0px 1px 1px 0px #00bfa5, 0px 1px 3px 0px #00bfa5" }}>
       <CardActionArea>
         <CardContent>
           <Typography gutterBottom component="div" style={{ fontSize: "16px", color: "#696d6c" }}>

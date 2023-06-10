@@ -10,7 +10,7 @@ function SquarePattern() {
 
             <NavigationButtons lName="Horizontal Line" lLink="/horizontalLinepattern" rName="Right Triangle" rLink="/rightTrianglepattern"/>
 
-            <Grid container style={{ whiteSpace: "pre-wrap", color: "#40816b", fontSize: "24px", height: "200px", justifyContent: "center", alignItems: "center", marginBottom: "20px", boxShadow: "0px 2px 1px -1px #55ac8f, 0px 1px 1px 0px #55ac8f, 0px 1px 3px 0px #55ac8f" }}>
+            <Grid container style={{ whiteSpace: "pre-wrap", color: "#40816b", fontSize: "24px", height: "200px", justifyContent: "center", alignItems: "center", marginBottom: "20px", boxShadow: "0px 2px 1px -1px #00bfa5, 0px 1px 1px 0px #00bfa5, 0px 1px 3px 0px #00bfa5" }}>
                 <Grid >{
                     `*  *  *  *  *
 *  *  *  *  *

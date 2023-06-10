@@ -63,7 +63,9 @@ import Strings from "./Pages/AI Pages/Strings.json";
 import Generators from "./Pages/AI Pages/Generators.json";
 import Symbol from "./Pages/AI Pages/Symbol.json";
 import SetsAndMaps from "./Pages/AI Pages/SetsAndMaps.json";
-import Home from "./Excercise/home"
+import Home from "./Excercise/home";
+import { Quiz } from './Pages/Quiz/quiz';
+import {QuizQuestion} from "./Pages/Quiz/question"
 
 function RouterComponent() {
     
@@ -130,6 +132,8 @@ function RouterComponent() {
                 <Route path="/Symbol" element={<AiPages commentID={"e1d2e6f0_1679593932"} data={Symbol}/>}></Route>
                 <Route path="/Sets And Maps" element={<AiPages commentID={"b21664a5_1679593924"} data={SetsAndMaps}/>}></Route>
                 <Route path="/undefined" element={<p>No results found for your search term.</p>}></Route>
+                <Route path="/quiz" element={<Quiz />}></Route> 
+                <Route path="/quizQuestion" element={<QuizQuestion />}></Route> 
                 <Route path="/contactUs" element={<ContactUs />}></Route> 
                 <Route path="/terms" element={<Terms />}></Route> 
                 <Route path="/privacyPolicy" element={<PrivacyPolicy />}></Route>

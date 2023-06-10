@@ -81,7 +81,7 @@
 
 .option.correct {
   color: #fff;
-  background-color: #55ac8f;
+  background-color: #00bfa5;
 }
 
 .option.incorrect {
@@ -137,7 +137,7 @@
 /* bottom navigation button */
 .naviagationBtn{
   color: white;
-    background: #55ac8f;
+    background: #00bfa5;
     font-size: 35px !important;
     border-radius: 5px;
 }

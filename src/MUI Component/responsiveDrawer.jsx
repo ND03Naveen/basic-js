@@ -22,6 +22,9 @@ import RouterComponent from "../router";
 import { Link } from "react-router-dom";
 import "./responsivedrawer.css";
 import { useEffect } from 'react';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import Collapse from '@mui/material/Collapse';
 
 const BodyContext = React.createContext({});
 
@@ -77,7 +80,7 @@ const style = {
         letterSpacing: ".08rem"
     },
     logosubtext: {
-        color: "#55ac8f",
+        color: "#009688",
         fontWeight: 700,
         fontSize: "0.6875rem",
         textTransform: "uppercase",
@@ -124,7 +127,7 @@ function ResponsiveDrawer(props) {
         {
             "label": "Loops",
             "link": "/Loops"
-        },{
+        }, {
             "label": "Strings",
             "link": "/Strings"
         },
@@ -271,6 +274,11 @@ function ResponsiveDrawer(props) {
         // scroll to Top of the page
         document.documentElement.scrollTop = 0;
     }
+    const [openBasicConcepts, setOpenBasicConcepts] = React.useState(true);
+
+    const handleBasicConceptClick = () => {
+        setOpenBasicConcepts(!openBasicConcepts);
+    };
 
     const drawer = (
         <div>
@@ -287,15 +295,28 @@ function ResponsiveDrawer(props) {
             </Toolbar>
             <Divider />
             <List >
-                {menus.map((text, index) => (
-                    <ListItem key={text.label + index} disablePadding >
-                        <Link to={text.link} style={{ textDecoration: "none", width: "100%" }}>
-                            <ListItemButton style={{ paddingBottom: "0px" }} onClick={() => handleActiveMenu(text.link)}>
-                                <ListItemText className={text.isActive ? 'activeMenu' : 'greyBlack'} primary={text.label} style={{ paddingLeft: "25px" }} />
-                            </ListItemButton>
-                        </Link>
-                    </ListItem>
-                ))}
+                <ListItemButton onClick={handleBasicConceptClick}>
+                    <ListItemText primary="Basic Concepts" style={{ fontWeight: 400, color: "#000000c2" }} />
+                    {openBasicConcepts ? <ExpandLess /> : <ExpandMore />}
+                </ListItemButton>
+                <Collapse in={openBasicConcepts} timeout="auto" unmountOnExit>
+                    <List component="div" disablePadding>
+                        {menus.map((text, index) => (
+                            <ListItem key={text.label + index} disablePadding >
+                                <Link to={text.link} style={{ textDecoration: "none", width: "100%" }}>
+                                    <ListItemButton style={{ paddingBottom: "0px" }} onClick={() => handleActiveMenu(text.link)}>
+                                        <ListItemText className={text.isActive ? 'activeMenu' : 'greyBlack'} primary={text.label} style={{ paddingLeft: "25px" }} />
+                                    </ListItemButton>
+                                </Link>
+                            </ListItem>
+                        ))}
+                    </List>
+                </Collapse>
+                <Link to={"quiz"} style={{ fontWeight: 400,textDecoration: "none", width: "100%",color:"#000000c2" }}>
+                    <ListItemButton>
+                        <ListItemText primary="Quiz" />
+                    </ListItemButton>
+                </Link>
             </List>
         </div>
     );
@@ -304,7 +325,7 @@ function ResponsiveDrawer(props) {
 
     const handleSearch = (event) => {
         if (event.keyCode === 13 || event.which === 13) {
-            window1.location.hash = `#/${menus.map(val=>val.label).find(str => RegExp(event.target.value,"i").test(str))}`;
+            window1.location.hash = `#/${menus.map(val => val.label).find(str => RegExp(event.target.value, "i").test(str))}`;
             event.target.value = "";
         }
     }
@@ -318,7 +339,7 @@ function ResponsiveDrawer(props) {
                     sx={{
                         width: { sm: `calc(100% - ${drawerWidth}px)` },
                         ml: { sm: `${drawerWidth}px` },
-                        background: "#55ac8f"
+                        background: "#009688"
                     }}
                 >
                     <Toolbar>
@@ -397,7 +418,7 @@ function ResponsiveDrawer(props) {
                     sx={{ flexGrow: 1, p: 3, width: "100vw" }}
                 >
                     <Toolbar />
-                    <BodyContext.Provider value={{ handleActiveMenu: handleActiveMenu ,menus:menus}}>
+                    <BodyContext.Provider value={{ handleActiveMenu: handleActiveMenu, menus: menus }}>
                         <RouterComponent />
                     </BodyContext.Provider>
                 </Box>

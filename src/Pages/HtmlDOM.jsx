@@ -21,7 +21,7 @@ function automateExample() {
     setTimeout(() => username.value = "", 900);
     setTimeout(() => document.getElementById("touchIconSubmit").style.display = "", 1000);
     setTimeout(() => document.getElementById("touchIconSubmit").style.display = "none", 1300);
-    setTimeout(() => document.getElementById("submit").style = "color:white;background:#55ac8f;border-color:white;margin-top:15px", 1300);
+    setTimeout(() => document.getElementById("submit").style = "color:white;background:#00bfa5;border-color:white;margin-top:15px", 1300);
     setTimeout(() => document.getElementById("submit").style = "margin-top:15px", 1500);
     setTimeout(() => document.getElementById("submit").click(), 1500);
   }
@@ -36,7 +36,7 @@ function automateExample() {
     setTimeout(() => username.value = "Bharathi", 800);
     setTimeout(() => document.getElementById("touchIconSubmit").style.display = "", 900);
     setTimeout(() => document.getElementById("touchIconSubmit").style.display = "none", 1200);
-    setTimeout(() => document.getElementById("submit").style = "color:white;background:#55ac8f;border-color:white;margin-top:15px", 1200);
+    setTimeout(() => document.getElementById("submit").style = "color:white;background:#00bfa5;border-color:white;margin-top:15px", 1200);
     setTimeout(() => document.getElementById("submit").style = "margin-top:15px", 1400);
     setTimeout(() => document.getElementById("submit").click(), 1400);
   }

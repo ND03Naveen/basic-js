@@ -26,7 +26,7 @@ const CodeEditor = forwardRef((props, ref) => {
         width:"100%",
         fontFamily: '"Fira code", "Fira Mono", monospace',
         fontSize: 12,
-        borderLeft: "5px solid #55ac8f",
+        borderLeft: "5px solid #00bfa5",
         borderRadius: "5px",
         margin: "1.2em 0em"
       }}
