@@ -244,13 +244,18 @@ const Quiz = ({ question, options, answer, code, questionNo }) => {
 
     const handleOptionClick = (option, answer) => {
         setSelectedOption(option);
-        console.log(answer, option, "answer == option")
+        var speech = new SpeechSynthesisUtterance();        
         if (answer == option) {
+            speech.text = "Correct";            
             let solved = localStorage.getItem("solved").split(",");
             if (solved.indexOf(questionNo) == -1) // push only if it not exeed
                 solved.push(questionNo);
             localStorage.setItem("solved", solved.join(","));
         }
+        else{
+            speech.text = "Wrong"; 
+        }
+        speechSynthesis.speak(speech);
     };
 
     return (

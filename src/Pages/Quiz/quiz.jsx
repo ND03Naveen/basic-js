@@ -32,8 +32,9 @@ export function Quiz() {
     useEffect(() => {
         var speech = new SpeechSynthesisUtterance();
         speech.text = "Welcome to the JavaScript Quiz! Test your knowledge and have fun learning JavaScript. Get ready to explore the world of coding with interactive questions. Let's begin your JavaScript journey!";
-        speechSynthesis.speak(speech);    
-        let solved = localStorage.getItem("solved")?localStorage.getItem("solved").split(","):[];
+        speechSynthesis.speak(speech); 
+        if(!localStorage.getItem("solved"))  localStorage.setItem("solved",[]) 
+        let solved = localStorage.getItem("solved").split(",");
         questionTopic = questionTopic.map((val,idx)=>{
             if(solved.indexOf(idx.toString())!=-1) val.isSolved = true;
             else val.isSolved = false;
