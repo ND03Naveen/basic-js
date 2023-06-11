@@ -37,7 +37,7 @@ function ReverseTrianglePattern() {
 
             <NavigationButtons lName="Triangle" lLink="/trianglepattern" rName="Diamond" rLink="/diamondpattern"/>
 
-            <div className="powr-comments" id="eb250244_1674980283"></div>
+            <div className="powr-comments" id="bff92cc1_1686470939"></div>
 
         </Grid>
     )

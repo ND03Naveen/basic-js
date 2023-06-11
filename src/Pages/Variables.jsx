@@ -46,7 +46,7 @@ function Variables() {
 
             <NavigationButtons lName="Variables" lLink="" rName="Operator" rLink="/operator"/>
             
-            <div className="powr-comments" id="31f74d4e_1674414411"></div>
+            <div className="powr-comments" id="2da25de3_1686470305"></div>
         </Grid>
     )
 }

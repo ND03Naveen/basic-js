@@ -4,18 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {  createBrowserRouter,  RouterProvider,HashRouter} from "react-router-dom";
-import Home from './Excercise/home';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <div>Hello world!</div>,
-  },
-  {
-    path: "/variable",
-    element: <div>variable</div>,
-  },
-]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const currentLocation = window.location;

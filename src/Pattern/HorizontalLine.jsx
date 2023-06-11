@@ -31,7 +31,7 @@ function HorizontalLinePattern() {
 
             <NavigationButtons lName="Vertical Line" lLink="/verticalLinePattern" rName="Square" rLink="/squarepattern"/>
 
-            <div className="powr-comments" id="7f78dee5_1674980263"></div>
+            <div className="powr-comments" id="ae82124b_1686470869"></div>
 
         </Grid>
     )

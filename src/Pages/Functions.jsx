@@ -27,7 +27,7 @@ function Functions() {
 
             <NavigationButtons lName="If Else" lLink="/ifElse" rName="Loop" rLink="/loop"/>
 
-            <div className="powr-comments" id="99989504_1674578933"></div>
+            <div className="powr-comments" id="4cb51da3_1686470468"></div>
         </Grid>
     )
 }

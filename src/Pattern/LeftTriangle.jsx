@@ -34,7 +34,7 @@ function LeftTrianglePattern() {
 
             <NavigationButtons lName="Right Triangle" lLink="/rightTrianglepattern" rName="Triangle" rLink="/trianglepattern"/>
 
-            <div className="powr-comments" id="bdb03fb4_1674980275"></div>
+            <div className="powr-comments" id="5ead0519_1686470905"></div>
 
         </Grid>
     )

@@ -1,8 +1,8 @@
-import { Button, Grid } from "@mui/material";
+import { Button, Grid, TextField } from "@mui/material";
 import "../AI Pages/aiPages.css";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -12,7 +12,14 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
-import "./question.css"
+import "./question.css";
+import correctSound from './correct.wav';
+import wrongSound from './wrong.mp3';
+import SimpleDialogComp from "../../MUI Component/dialog";
+import { Link } from "react-router-dom";
+import HomeIcon from '@mui/icons-material/Home';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import EmailIcon from '@mui/icons-material/Email';
 
 var questions = [
     {
@@ -158,7 +165,6 @@ var questions = [
 ];
 
 let currentQuestion = 0;
-var collapseClosed = true;
 
 export function QuizQuestion() {
     const [question, setQuestion] = useState({
@@ -168,14 +174,17 @@ export function QuizQuestion() {
         "answer": "",
         "explanation": ""
     });
+    var [collapseClosed, setCollapeseClose] = useState(true);
     const location = useLocation();
     useEffect(() => {
-        collapseClosed = true;
+        setCollapeseClose(true);
         const params = new URLSearchParams(location.search);
         currentQuestion = params.get('no');
         setQuestion(questions[currentQuestion]);
         // To stop the speech synthesis
         speechSynthesis.cancel();
+
+        return () => speechSynthesis.cancel();
     }, [])
     const navigate = useNavigate();
     const back = () => {
@@ -188,7 +197,7 @@ export function QuizQuestion() {
         // To stop the speech synthesis
         speechSynthesis.cancel();
 
-        collapseClosed = true;
+        setCollapeseClose(true);
     }
 
     const next = () => {
@@ -200,27 +209,28 @@ export function QuizQuestion() {
         // To stop the speech synthesis
         speechSynthesis.cancel();
 
-        collapseClosed = true;
+        setCollapeseClose(true);
     }
-    
-    const readoutExplanation = (explanation) => {            
-            if (!collapseClosed) { collapseClosed = !collapseClosed; speechSynthesis.cancel(); return;}
-            var speech = new SpeechSynthesisUtterance();
-            speech.text = explanation;
-            speechSynthesis.speak(speech);
-            collapseClosed = !collapseClosed;
+
+    const readoutExplanation = (explanation) => {
+        if (!collapseClosed) { setCollapeseClose(!collapseClosed); speechSynthesis.cancel(); return; }
+        var speech = new SpeechSynthesisUtterance();
+        speech.text = explanation;
+        speechSynthesis.speak(speech);
+        setCollapeseClose(!collapseClosed);
     }
     return (
         <Grid container>
             <Grid container style={{ display: "flex", justifyContent: "space-between" }}>
                 <Grid item xs={3}><Button variant="contained" style={{ background: "#00bfa5" }} onClick={back} disabled={currentQuestion == 0}><NavigateBeforeIcon style={{ fontSize: "20px" }} /> Back</Button></Grid>
+                <Grid item xs={3} style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>{Number(currentQuestion) + 1}/{questions.length}</Grid>
                 <Grid item xs={3} style={{ display: "flex", justifyContent: "flex-end" }}><Button onClick={next} disabled={currentQuestion == questions.length - 1} variant="contained" style={{ background: "#00bfa5" }}> Next <NavigateNextIcon style={{ fontSize: "20px" }} /></Button></Grid>
             </Grid>
             <Grid container>
                 <Quiz questionNo={currentQuestion} question={question.question} options={question.options} answer={question.answer} code={question.code} />
             </Grid>
             <Grid container>
-                <Accordion>
+                <Accordion expanded={!collapseClosed}>
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon onClick={() => readoutExplanation(question.explanation)} />}
                         aria-controls="panel1a-content"
@@ -240,24 +250,35 @@ export function QuizQuestion() {
 }
 
 const Quiz = ({ question, options, answer, code, questionNo }) => {
+    const dialog = useRef(null)
     const [selectedOption, setSelectedOption] = useState(null);
-
+    const correctSoundRef = useRef(null);
+    const wrongSoundRef = useRef(null);
+    useEffect(() => {
+        return () => speechSynthesis.cancel();
+    }, [])
     const handleOptionClick = (option, answer) => {
         setSelectedOption(option);
-        var speech = new SpeechSynthesisUtterance();        
         if (answer == option) {
-            speech.text = "Correct";            
+            correctSoundRef.current.play();
             let solved = localStorage.getItem("solved").split(",");
             if (solved.indexOf(questionNo) == -1) // push only if it not exeed
                 solved.push(questionNo);
             localStorage.setItem("solved", solved.join(","));
+            if (questionNo == questions.length - 1) {
+                var speech = new SpeechSynthesisUtterance();
+                speech.text = "Congratulations . Thank you for using our website and completing the quiz! Keep exploring JavaScript with us. Click the home button for more resources. Happy coding! Share your feedback via Whatsapp or Email.";
+                speechSynthesis.speak(speech);
+                dialog.current.openDialog();
+            }
         }
-        else{
-            speech.text = "Wrong"; 
+        else {
+            wrongSoundRef.current.play();
         }
-        speechSynthesis.speak(speech);
     };
 
+
+    const [feedback, setFeedback] = useState("")
     return (
         <div className="quiz" style={{ width: "100%" }}>
             <h2 className="question">{question}</h2>
@@ -277,6 +298,49 @@ const Quiz = ({ question, options, answer, code, questionNo }) => {
                     </li>
                 ))}
             </ul>
+            <audio ref={correctSoundRef}>
+                <source src={correctSound} type="audio/wav" />
+            </audio>
+
+            <audio ref={wrongSoundRef}>
+                <source src={wrongSound} type="audio/mpeg" />
+            </audio>
+            <SimpleDialogComp ref={dialog}>
+                <Grid container sx={{ width: { xs: "80vw", md: "40vw" }, padding: "25px" }}>
+                    <Grid container style={{ marginBottom: "20px", fontSize: "2rem", fontWeight: 500, lineHeight: 1.2, color: "#009688", justifyContent: "center",marginTop:"30px" }}>Congratulations !!!</Grid>
+
+                    <Grid container style={{ justifyContent: "space-between", margin: "35px 0px" }}>
+
+                        <Grid item xs={3} style={{display:"flex",justifyContent:"center"}}>
+                            <Link to={"/"} style={{ textDecoration: "none" }}>
+                                <Button variant="contained" style={{ background: "#00bfa5", borderRadius: "50px",padding: "30px",height: "50px", width: "50px" }}><HomeIcon/></Button>
+                            </Link>
+                        </Grid>
+                        <Grid item xs={3} style={{display:"flex",justifyContent:"center"}}>
+                            <Button
+                                variant="contained"
+                                style={{ background: "#00bfa5", borderRadius: "50px",padding: "30px",height: "50px", width: "50px" }}
+                                onClick={() => {
+                                    window.open("https://api.whatsapp.com/send?phone=918124359871", "_blank");
+                                }}
+                            >
+                                <WhatsAppIcon/>
+                            </Button>
+                        </Grid>
+                        <Grid item xs={3} style={{display:"flex",justifyContent:"center"}}>
+                            <Button
+                                variant="contained"
+                                style={{ background: "#00bfa5", borderRadius: "50px",padding: "30px",height: "50px", width: "50px" }}
+                                onClick={() => {
+                                    window.location.href = "mailto:ndnaveensweeebe@gmail.com";
+                                }}
+                            >
+                                <EmailIcon/>
+                            </Button>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </SimpleDialogComp>
         </div>
     );
 };

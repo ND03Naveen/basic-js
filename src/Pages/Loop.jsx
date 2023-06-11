@@ -6,7 +6,7 @@ function Loop() {
         <Grid>
             <h2>Javascript Loop</h2>
 
-            <NavigationButtons lName="Functions" lLink="/functions" rName="String" rLink="/string" />
+            <NavigationButtons lName="Functions" lLink="/functions10" rName="String" rLink="/string" />
 
             <p>It is used to do the same work multiple times.</p>
 
@@ -32,9 +32,9 @@ function Loop() {
                 <span className="keywords">dob 28-03-1996</span><br /><br />
                 <span className="keywords">city kallakurichi</span></p>
 
-            <NavigationButtons lName="Functions" lLink="/functions" rName="String" rLink="/string" />
+            <NavigationButtons lName="Functions" lLink="/functions10" rName="String" rLink="/string" />
 
-            <div className="powr-comments" id="2302a313_1674713336"></div>
+            <div className="powr-comments" id="61f39a52_1686470592"></div>
         </Grid>
     )
 }

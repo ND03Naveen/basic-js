@@ -6,7 +6,7 @@ function IfElse() {
         <Grid>
             <h2>Conditional Statement</h2>
 
-            <NavigationButtons lName="Operator" lLink="/operator" rName="Functions" rLink="/functions"/>
+            <NavigationButtons lName="Operator" lLink="/operator" rName="Functions" rLink="/functions10"/>
 
             <p>It is used to conditionally execute the block of code.</p>
             <h3>False Values</h3>
@@ -47,9 +47,9 @@ function IfElse() {
             <CodeEditor code={ifElseifEg} />
             <p>Console Output: <span className="keywords">Step2</span></p>
 
-            <NavigationButtons lName="Operator" lLink="/operator" rName="Functions" rLink="/functions"/>
+            <NavigationButtons lName="Operator" lLink="/operator" rName="Functions" rLink="/functions10"/>
 
-            <div className="powr-comments" id="d509f23a_1674578858"></div>
+            <div className="powr-comments" id="3af72019_1686470418"></div>
         </Grid>
     )
 }

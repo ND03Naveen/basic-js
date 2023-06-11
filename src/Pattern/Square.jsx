@@ -34,7 +34,7 @@ function SquarePattern() {
 
             <NavigationButtons lName="Horizontal Line" lLink="/horizontalLinepattern" rName="Right Triangle" rLink="/rightTrianglepattern"/>
 
-            <div className="powr-comments" id="e7c4c8c1_1674980267"></div>
+            <div className="powr-comments" id="967aed98_1686471033"></div>
 
         </Grid>
     )

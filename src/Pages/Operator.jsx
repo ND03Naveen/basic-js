@@ -57,7 +57,7 @@ function Operator() {
 
             <NavigationButtons lName="Variable" lLink="/variables" rName="If Else" rLink="/ifElse"/>
 
-            <div className="powr-comments" id="bbfa5f74_1674713332"></div>
+            <div className="powr-comments" id="e8f70335_1686470385"></div>
         </Grid>
     )
 }

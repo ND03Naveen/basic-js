@@ -31,7 +31,7 @@ function StartPattern() {
 
             <NavigationButtons lName="Star" lLink="" rName="Vertical Name" rLink="/verticalLinePattern"/>
 
-            <div className="powr-comments" id="caeb0fe5_1674980291"></div>
+            <div className="powr-comments" id="67cf20a9_1686471084"></div>
 
         </Grid>
     )

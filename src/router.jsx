@@ -1,26 +1,26 @@
 import * as React from 'react';
 import { Route, Routes } from "react-router-dom";
-// import HtmlDOM from "./Pages/HtmlDOM"
-// import Variables from "./Pages/Variables";
-// import Functions from "./Pages/Functions";
-// import IfElse from './Pages/IfElse';
-// import Operator from './Pages/Operator';
-// import Loop from './Pages/Loop';
-// import String from './Pages/String';
-// import Array from './Pages/Array';
-// import TypeConversion from './Pages/TypeConversion';
-// import RegEx from './Pages/RegEx';
-// import Integration from './Pages/Integration';
-// import Home from "./Pages/Home";
-// import StartPattern from './Pattern/Star';
-// import VerticalLinePattern from './Pattern/VerticalLine';
-// import HorizontalLinepattern from './Pattern/HorizontalLine';
-// import SquarePattern from './Pattern/Square';
-// import RightTrianglepattern from './Pattern/RightTriangle';
-// import LeftTrianglepattern from './Pattern/LeftTriangle';
-// import Trianglepattern from './Pattern/Triangle';
-// import Reversetrianglepattern from './Pattern/Reversetriangle';
-// import Diamondpattern from './Pattern/Diamond';
+import HtmlDOM from "./Pages/HtmlDOM"
+import Variables from "./Pages/Variables";
+import Functions10 from "./Pages/Functions";
+import IfElse from './Pages/IfElse';
+import Operator from './Pages/Operator';
+import Loop from './Pages/Loop';
+import String from './Pages/String';
+import Array from './Pages/Array';
+import TypeConversion from './Pages/TypeConversion';
+import RegEx from './Pages/RegEx';
+import Integration from './Pages/Integration';
+import Home from "./Pages/home";
+import StartPattern from './Pattern/Star';
+import VerticalLinePattern from './Pattern/VerticalLine';
+import HorizontalLinepattern from './Pattern/HorizontalLine';
+import SquarePattern from './Pattern/Square';
+import RightTrianglepattern from './Pattern/RightTriangle';
+import LeftTrianglepattern from './Pattern/LeftTriangle';
+import Trianglepattern from './Pattern/Triangle';
+import Reversetrianglepattern from './Pattern/Reversetriangle';
+import Diamondpattern from './Pattern/Diamond';
 import Terms from './Pages/googleAdsense/Terms';
 import ContactUs from './Pages/googleAdsense/ContactUs';
 import AboutUs from './Pages/googleAdsense/AboutUs';
@@ -63,18 +63,18 @@ import Strings from "./Pages/AI Pages/Strings.json";
 import Generators from "./Pages/AI Pages/Generators.json";
 import Symbol from "./Pages/AI Pages/Symbol.json";
 import SetsAndMaps from "./Pages/AI Pages/SetsAndMaps.json";
-import Home from "./Excercise/home";
 import { Quiz } from './Pages/Quiz/quiz';
 import {QuizQuestion} from "./Pages/Quiz/question"
+import PatternHome from './Pattern/home';
 
 function RouterComponent() {
     
     return (
         <React.Fragment>
             <Routes>
-                {/* <Route path="/" element={<Home />}></Route>
+                <Route path="/" element={<Home />}></Route>
                 <Route path="/home" element={<Home />}></Route>
-                <Route path="/pattern" element={<Home />}></Route>
+                <Route path="/pattern" element={<PatternHome />}></Route>
                 <Route path="/starPattern" element={<StartPattern />}></Route>
                 <Route path="/verticalLinePattern" element={<VerticalLinePattern />}></Route>
                 <Route path="/horizontalLinepattern" element={<HorizontalLinepattern />}></Route>
@@ -84,9 +84,10 @@ function RouterComponent() {
                 <Route path="/trianglepattern" element={<Trianglepattern />}></Route>
                 <Route path="/reversetrianglepattern" element={<Reversetrianglepattern />}></Route>
                 <Route path="/diamondpattern" element={<Diamondpattern />}></Route>
+                  
                 <Route path="/variables" element={<Variables />}></Route>
                 <Route path="/operator" element={<Operator />}></Route>
-                <Route path="/functions" element={<Functions />}></Route>
+                <Route path="/functions10" element={<Functions10 />}></Route>
                 <Route path="/ifElse" element={<IfElse />}></Route>
                 <Route path="/loop" element={<Loop />}></Route>
                 <Route path="/string" element={<String />}></Route>
@@ -94,8 +95,7 @@ function RouterComponent() {
                 <Route path="/typeConversion" element={<TypeConversion />}></Route>
                 <Route path="/regex" element={<RegEx />}></Route>
                 <Route path="/integration" element={<Integration />}></Route> 
-                <Route path="/HtmlDOM" element={<HtmlDOM />}></Route>    */}
-                <Route path="/" element={<AiPages commentID={"c04f17ea_1679249956"} data={IntroductionToJavaScript}/>}></Route>
+                <Route path="/HtmlDOM" element={<HtmlDOM />}></Route>  
                 <Route path="/Introduction to JavaScript" element={<AiPages commentID={"c04f17ea_1679249956"} data={IntroductionToJavaScript}/>}></Route>
                 <Route path="/Variables and Data Types" element={<AiPages commentID={"df0aa12a_1679250331"} data={VariablesAndDatatypes}/>}></Route>
                 <Route path="/Operators" element={<AiPages commentID={"48d46fcc_1679250360"} data={Operators}/>}></Route>

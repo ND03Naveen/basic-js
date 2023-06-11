@@ -92,21 +92,19 @@ var window1 = window;
 function ResponsiveDrawer(props) {
     const { window, url } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
-    // const [menus, setMenus] = React.useState([
-    //     { label: "Home", link: "/home" },
-    //     { label: "JS Variables", link: "/variables" },
-    //     { label: "JS Operator", link: "/operator" },
-    //     { label: "JS If Else", link: "/ifElse" },
-    //     { label: "JS Function", link: "/functions" },
-    //     { label: "JS Loop", link: "/loop" },
-    //     { label: "JS String", link: "/string" },
-    //     { label: "JS Array", link: "/array" },
-    //     { label: "Type Conversion", link: "/typeConversion" },
-    //     { label: "JS RegEx", link: "/regex" },
-    //     { label: "JS Integration", link: "/integration" },
-    //     { label: "JS HTML DOM", link: "/HtmlDOM" },
-    //     { label : "Pattern Excersise", link:"/pattern"}
-    // ]);
+    const [menus10, setMenus10] = React.useState([
+        { label: "JS Variables", link: "/variables" },
+        { label: "JS Operator", link: "/operator" },
+        { label: "JS If Else", link: "/ifElse" },
+        { label: "JS Function", link: "/functions10" },
+        { label: "JS Loop", link: "/loop" },
+        { label: "JS String", link: "/string" },
+        { label: "JS Array", link: "/array" },
+        { label: "Type Conversion", link: "/typeConversion" },
+        { label: "JS RegEx", link: "/regex" },
+        { label: "JS Integration", link: "/integration" },
+        { label: "JS HTML DOM", link: "/HtmlDOM" }
+    ]);
     const [menus, setMenus] = React.useState([
         {
             "label": "Introduction to JavaScript",
@@ -274,16 +272,22 @@ function ResponsiveDrawer(props) {
         // scroll to Top of the page
         document.documentElement.scrollTop = 0;
     }
-    const [openBasicConcepts, setOpenBasicConcepts] = React.useState(true);
-
+    const [openBasicConcepts, setOpenBasicConcepts] = React.useState(false);
+    const [openBasicConcepts10, setOpenBasicConcepts10] = React.useState(false);
     const handleBasicConceptClick = () => {
         setOpenBasicConcepts(!openBasicConcepts);
+    };
+
+    const handleBasicConceptClick10 = () => {
+        setOpenBasicConcepts10(!openBasicConcepts10);
     };
 
     const drawer = (
         <div>
             <Toolbar >
+            <Link to={"/home"} style={{ textDecoration: "none", width: "100%" }}>
                 <Grid container style={{ justifyContent: "space-evenly" }}>
+                    
                     <Grid item>
                         <img src={logo} alt="no logo found" height={"40px"} width={"40px"} />
                     </Grid>
@@ -292,11 +296,34 @@ function ResponsiveDrawer(props) {
                         <Grid style={style.logosubtext}>Easy to learn</Grid>
                     </Grid>
                 </Grid>
+                </Link>
             </Toolbar>
             <Divider />
             <List >
+            <Link to={"/home"} style={{ fontWeight: 400,textDecoration: "none", width: "100%",color:"#000000c2" }}>
+                    <ListItemButton>
+                        <ListItemText primary="Home" />
+                    </ListItemButton>
+                </Link>
+            <ListItemButton onClick={handleBasicConceptClick10}>
+                    <ListItemText primary="10 Days of JS" style={{ fontWeight: 400, color: "#000000c2" }} />
+                    {openBasicConcepts10 ? <ExpandLess /> : <ExpandMore />}
+                </ListItemButton>
+                <Collapse in={openBasicConcepts10} timeout="auto" unmountOnExit>
+                    <List component="div" disablePadding>
+                        {menus10.map((text, index) => (
+                            <ListItem key={text.label + index} disablePadding >
+                                <Link to={text.link} style={{ textDecoration: "none", width: "100%" }}>
+                                    <ListItemButton style={{ paddingBottom: "0px" }} onClick={() => handleActiveMenu(text.link)}>
+                                        <ListItemText className={text.isActive ? 'activeMenu' : 'greyBlack'} primary={text.label} style={{ paddingLeft: "25px" }} />
+                                    </ListItemButton>
+                                </Link>
+                            </ListItem>
+                        ))}
+                    </List>
+                </Collapse>
                 <ListItemButton onClick={handleBasicConceptClick}>
-                    <ListItemText primary="Basic Concepts" style={{ fontWeight: 400, color: "#000000c2" }} />
+                    <ListItemText primary="25 Days of JS" style={{ fontWeight: 400, color: "#000000c2" }} />
                     {openBasicConcepts ? <ExpandLess /> : <ExpandMore />}
                 </ListItemButton>
                 <Collapse in={openBasicConcepts} timeout="auto" unmountOnExit>
@@ -312,9 +339,14 @@ function ResponsiveDrawer(props) {
                         ))}
                     </List>
                 </Collapse>
-                <Link to={"quiz"} style={{ fontWeight: 400,textDecoration: "none", width: "100%",color:"#000000c2" }}>
+                <Link to={"/quiz"} style={{ fontWeight: 400,textDecoration: "none", width: "100%",color:"#000000c2" }}>
                     <ListItemButton>
                         <ListItemText primary="Quiz" />
+                    </ListItemButton>
+                </Link>
+                <Link to={"/pattern"} style={{ fontWeight: 400,textDecoration: "none", width: "100%",color:"#000000c2" }}>
+                    <ListItemButton>
+                        <ListItemText primary="Pattern Excersise" />
                     </ListItemButton>
                 </Link>
             </List>

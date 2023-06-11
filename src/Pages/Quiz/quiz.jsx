@@ -41,6 +41,8 @@ export function Quiz() {
             return val;
         })
         setQuestionTopic(questionTopic);
+
+        return ()=> speechSynthesis.cancel();
     }, [])
 
     return (

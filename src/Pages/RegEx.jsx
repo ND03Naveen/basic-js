@@ -52,7 +52,7 @@ function RegEx() {
 
             <NavigationButtons lName="Type Conversion" lLink="/typeConversion" rName="API Integration" rLink="/integration"/>
             
-            <div className="powr-comments" id="6cdb2430_1674713328"></div>
+            <div className="powr-comments" id="7f3c2309_1686470732"></div>
         </Grid>
     )
 }
