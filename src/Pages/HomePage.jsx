@@ -8,7 +8,7 @@ const topics = [
     { name: "Quiz", link: "/quiz" },
     { name: "Pattern Excercise", link: "/pattern" },
 ]
-export default function Home(params) {
+export default function HomePage(params) {
     return (
         <Grid container spacing={4}>
             {topics.map(val => <Grid item xs={12} md={6}>

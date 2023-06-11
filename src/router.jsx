@@ -11,7 +11,7 @@ import Array from './Pages/Array';
 import TypeConversion from './Pages/TypeConversion';
 import RegEx from './Pages/RegEx';
 import Integration from './Pages/Integration';
-import Home from "./Pages/home";
+import HomePage from "./Pages/HomePage";
 import StartPattern from './Pattern/Star';
 import VerticalLinePattern from './Pattern/VerticalLine';
 import HorizontalLinepattern from './Pattern/HorizontalLine';
@@ -72,8 +72,8 @@ function RouterComponent() {
     return (
         <React.Fragment>
             <Routes>
-                <Route path="/" element={<Home />}></Route>
-                <Route path="/home" element={<Home />}></Route>
+                <Route path="/" element={<HomePage />}></Route>
+                <Route path="/home" element={<HomePage />}></Route>
                 <Route path="/pattern" element={<PatternHome />}></Route>
                 <Route path="/starPattern" element={<StartPattern />}></Route>
                 <Route path="/verticalLinePattern" element={<VerticalLinePattern />}></Route>
