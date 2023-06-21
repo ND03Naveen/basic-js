@@ -11,11 +11,11 @@ const topics = [
 export default function HomePage(params) {
     return (
         <Grid container spacing={4}>
-            {topics.map(val => <Grid item xs={12} md={6}>
-                <Card raised={true} style={{ display: "flex", flexDirection: "column", alignItems: "center", height: "250px" }}>
-                    <div style={{ height: "65%", display: "flex", alignItems: "center", fontSize: "45px", color: "grey" }}>{val.name}</div>
+            {topics.map(val => <Grid item xs={12} md={6} lg={3}>
+                <Card raised={true} style={{ display: "flex", flexDirection: "column", alignItems: "center", height: "250px", justifyContent:"center" }}>
+                    <div style={{marginBottom:"10px", display: "flex", alignItems: "center", fontSize: "30px", color: "grey" }}>{val.name}</div>
                     <Link to={val.link} style={{ textDecoration: "none" }}>
-                        <Button variant="contained" style={{ background: "#00bfa5", padding: "5px 25px", fontSize: "22px" }}>Start</Button>
+                        <Button variant="contained" style={{ background: "#00bfa5", padding: "5px 25px", fontSize: "18px" }}>Start</Button>
                     </Link>
                 </Card>
             </Grid>)}
