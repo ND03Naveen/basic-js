@@ -257,6 +257,9 @@ const Quiz = ({ question, options, answer, code, questionNo }) => {
     useEffect(() => {
         return () => speechSynthesis.cancel();
     }, [])
+    useEffect(() => {
+        setSelectedOption(null)
+    }, [question,code])
     const handleOptionClick = (option, answer) => {
         setSelectedOption(option);
         if (answer == option) {
