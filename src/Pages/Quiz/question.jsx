@@ -216,6 +216,7 @@ export function QuizQuestion() {
         if (!collapseClosed) { setCollapeseClose(!collapseClosed); speechSynthesis.cancel(); return; }
         var speech = new SpeechSynthesisUtterance();
         speech.text = explanation;
+        speech.lang = "en-US"; // Set the language to English (United States)
         speechSynthesis.speak(speech);
         setCollapeseClose(!collapseClosed);
     }
@@ -271,6 +272,7 @@ const Quiz = ({ question, options, answer, code, questionNo }) => {
             if (questionNo == questions.length - 1) {
                 var speech = new SpeechSynthesisUtterance();
                 speech.text = "Congratulations . Thank you for using our website and completing the quiz! Keep exploring JavaScript with us. Click the home button for more resources. Happy coding! Share your feedback via Whatsapp or Email.";
+                speech.lang = "en-US"; // Set the language to English (United States)
                 speechSynthesis.speak(speech);
                 dialog.current.openDialog();
             }
