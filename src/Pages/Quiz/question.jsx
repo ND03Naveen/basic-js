@@ -271,7 +271,7 @@ const Quiz = ({ question, options, answer, code, questionNo }) => {
             localStorage.setItem("solved", solved.join(","));
             if (questionNo == questions.length - 1) {
                 var speech = new SpeechSynthesisUtterance();
-                speech.text = "Congratulations . Thank you for using our website and completing the quiz! Keep exploring JavaScript with us. Click the home button for more resources. Happy coding! Share your feedback via Whatsapp or Email.";
+                speech.text = "Congratulations";
                 speech.lang = "en-US"; // Set the language to English (United States)
                 speechSynthesis.speak(speech);
                 dialog.current.openDialog();
