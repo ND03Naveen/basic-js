@@ -20,11 +20,7 @@
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
     "react-router-dom": "^6.7.0",
-=======
-    "react-router-dom": "^6.9.0",
->>>>>>> 714b651d98a809f523febd1a6de1a17815ec5a00
     "react-scripts": "5.0.1",
     "react-simple-code-editor": "^0.13.1",
     "react-syntax-highlighter": "^15.5.0",
