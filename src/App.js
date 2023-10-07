@@ -1,5 +1,7 @@
 import './App.css';
 import TempleDataupload from "./templeDataupload"
+import * as React from 'react';
+
 // import ResponsiveDrawer from "./MUI Component/responsiveDrawer"
 
 // function App() {
