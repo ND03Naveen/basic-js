@@ -1,0 +1,49 @@
+{
+    "topic": "Recursive Functions in JavaScript",
+    "content": [
+    {
+    "type": "paragraph",
+    "text": "Recursive functions in JavaScript are functions that call themselves repeatedly until a specific condition is met. This technique is often used for solving problems that can be broken down into smaller subproblems, such as traversing a tree data structure or calculating a factorial."
+    },
+    {
+    "type": "funFact",
+    "text": "Recursive functions can be slower and use more memory than iterative solutions, but can be more elegant and easier to understand for certain problems."
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of a recursive function that calculates the factorial of a number:",
+    "code": "function factorial(n) {\n if (n <= 1) {\n return 1;\n }\n return n * factorial(n - 1);\n}\nconsole.log(factorial(5)); // Output: 120"
+    },
+    {
+    "type": "quiz",
+    "question": "What is a recursive function?",
+    "options": [
+    "A function that uses a loop to repeat a process",
+    "A function that calls itself repeatedly until a specific condition is met",
+    "A function that only works with recursive data structures",
+    "A function that returns multiple values"
+    ],
+    "answer": "A function that calls itself repeatedly until a specific condition is met"
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of a recursive function that traverses a binary tree data structure:",
+    "code": "function traverseTree(node) {\n if (!node) {\n return;\n }\n console.log(node.value);\n traverseTree(node.left);\n traverseTree(node.right);\n}"
+    },
+    {
+    "type": "funFact",
+    "text": "JavaScript has a maximum call stack size, so it's important to be careful when using recursive functions to avoid causing a stack overflow error."
+    },
+    {
+    "type": "quiz",
+    "question": "What is a potential issue with using recursive functions?",
+    "options": [
+    "They are always slower than iterative solutions",
+    "They can cause a stack overflow error if not used carefully",
+    "They can only be used for certain types of problems",
+    "They are harder to understand than iterative solutions"
+    ],
+    "answer": "They can cause a stack overflow error if not used carefully"
+    }
+    ]
+    }

@@ -1,0 +1,49 @@
+{
+    "topic": "Spread and Rest Operators in JavaScript",
+    "content": [
+    {
+    "type": "paragraph",
+    "text": "Spread and rest operators are two features that were introduced in ES6 and have become very popular in modern JavaScript development. They both use the same syntax, which is the three dots '...' symbol, but they have different uses."
+    },
+    {
+    "type": "funFact",
+    "text": "The spread operator is sometimes referred to as the 'three dots operator' because of its syntax."
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of the spread operator:",
+    "code": "const arr1 = [1, 2, 3];\nconst arr2 = [...arr1, 4, 5, 6];\nconsole.log(arr2); // Output: [1, 2, 3, 4, 5, 6]"
+    },
+    {
+    "type": "quiz",
+    "question": "What is the purpose of the spread operator?",
+    "options": [
+    "To combine two or more arrays into a single array",
+    "To split a string into an array of characters",
+    "To create a new object with the properties of an existing object",
+    "To create a new function from an existing function"
+    ],
+    "answer": "To combine two or more arrays into a single array"
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of the rest operator:",
+    "code": "function sum(...numbers) {\n return numbers.reduce((acc, val) => acc + val);\n}\nconsole.log(sum(1, 2, 3)); // Output: 6"
+    },
+    {
+    "type": "funFact",
+    "text": "The rest operator can be used to create functions that accept an unlimited number of arguments."
+    },
+    {
+    "type": "quiz",
+    "question": "What is the purpose of the rest operator?",
+    "options": [
+    "To combine two or more arrays into a single array",
+    "To split a string into an array of characters",
+    "To create a new object with the properties of an existing object",
+    "To create functions that accept an unlimited number of arguments"
+    ],
+    "answer": "To create functions that accept an unlimited number of arguments"
+    }
+    ]
+    }

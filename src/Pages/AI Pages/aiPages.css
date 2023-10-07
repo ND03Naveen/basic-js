@@ -1,0 +1,153 @@
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.topic {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.paragraph {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* fun fact */
+.fun-fact {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+}
+
+.emoji {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 1.5;
+  font-style: italic;
+  color: #333;
+  margin: 0px;
+}
+
+
+/* quiz */
+.quiz {
+  margin-bottom: 40px;
+}
+
+.question {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Helvetica Neue', sans-serif;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.options {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  height: auto;
+  padding: 10px 30px;
+  text-align: center;
+}
+
+.option:hover {
+  background-color: #d1d1d1;
+}
+
+.option.correct {
+  color: #fff;
+  background-color: #00bfa5;
+}
+
+.option.incorrect {
+  color: #fff;
+  background-color: #f76c6c;
+}
+
+/* List */
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.list__item__label {
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.list__item__value {
+  font-weight: normal;
+  color: #333333;
+  font-size: 16px;
+}
+
+.list__item__value span {
+  color: #666666;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.list__item__value a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.list__item__value a:hover {
+  text-decoration: underline;
+}
+
+/* code */
+.code {
+  margin-bottom: 25px !important;
+  border-radius: 10px;
+}
+
+/* bottom navigation button */
+.naviagationBtn{
+  color: white;
+    background: #00bfa5;
+    font-size: 35px !important;
+    border-radius: 5px;
+}
+.disableNavigationBtn{
+  background: lightgrey;
+  color: white;
+  font-size: 35px !important;
+  border-radius: 5px;
+}
+
+/* Scenario */
+
+

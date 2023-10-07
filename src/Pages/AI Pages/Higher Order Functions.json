@@ -1,0 +1,49 @@
+{
+    "topic": "Higher Order Functions in JavaScript",
+    "content": [
+    {
+    "type": "paragraph",
+    "text": "Higher order functions are functions that take other functions as arguments or return functions as their result. They allow for more flexible and reusable code, and are a key feature of functional programming in JavaScript."
+    },
+    {
+    "type": "funFact",
+    "text": "Higher order functions can help reduce code duplication by abstracting common functionality into reusable functions."
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of a higher order function that takes a function as an argument:",
+    "code": "function repeat(fn, n) {\n for (let i = 0; i < n; i++) {\n fn();\n }\n}"
+    },
+    {
+    "type": "quiz",
+    "question": "What is a higher order function?",
+    "options": [
+    "A function that takes other functions as arguments or returns functions as their result",
+    "A function that only takes one argument",
+    "A function that returns an object",
+    "A function that has a name longer than 10 characters"
+    ],
+    "answer": "A function that takes other functions as arguments or returns functions as their result"
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of using the higher order function from before:",
+    "code": "function greet() {\n console.log('Hello!');\n}\n\nrepeat(greet, 3);"
+    },
+    {
+    "type": "funFact",
+    "text": "Higher order functions are used extensively in modern JavaScript frameworks and libraries, such as React and Redux."
+    },
+    {
+    "type": "quiz",
+    "question": "What is a common use case for higher order functions in React?",
+    "options": [
+    "Handling user input",
+    "Managing state",
+    "Styling components",
+    "Fetching data from an API"
+    ],
+    "answer": "Managing state"
+    }
+    ]
+    }

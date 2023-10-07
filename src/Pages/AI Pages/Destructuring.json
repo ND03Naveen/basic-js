@@ -1,0 +1,49 @@
+{
+    "topic": "Destructuring in JavaScript",
+    "content": [
+    {
+    "type": "paragraph",
+    "text": "Destructuring is a feature in JavaScript that allows you to extract properties from objects or elements from arrays into individual variables."
+    },
+    {
+    "type": "funFact",
+    "text": "Destructuring was introduced in ES6 (ECMAScript 2015) and has quickly become a popular way to write concise and readable code."
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of object destructuring:",
+    "code": "const user = {\n name: 'John',\n age: 30,\n email: 'john@example.com'\n};\n\nconst { name, age } = user;\n\nconsole.log(name); // output: 'John'\nconsole.log(age); // output: 30"
+    },
+    {
+    "type": "quiz",
+    "question": "What is the purpose of destructuring in JavaScript?",
+    "options": [
+    "To combine multiple objects into a single object",
+    "To extract properties from objects or elements from arrays into individual variables",
+    "To create new objects based on existing ones",
+    "To replace the 'if' statement"
+    ],
+    "answer": "To extract properties from objects or elements from arrays into individual variables"
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of array destructuring:",
+    "code": "const colors = ['red', 'green', 'blue'];\n\nconst [firstColor, secondColor] = colors;\n\nconsole.log(firstColor); // output: 'red'\nconsole.log(secondColor); // output: 'green'"
+    },
+    {
+    "type": "funFact",
+    "text": "You can also use destructuring with function parameters to extract values from objects passed as arguments."
+    },
+    {
+    "type": "quiz",
+    "question": "What is the syntax for array destructuring in JavaScript?",
+    "options": [
+    "const { } = array;",
+    "const [ ] = array;",
+    "const ( ) = array;",
+    "const < > = array;"
+    ],
+    "answer": "const [ ] = array;"
+    }
+    ]
+    }

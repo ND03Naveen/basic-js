@@ -1,0 +1,67 @@
+{
+  "topic": "Loops in JavaScript",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Loops are used in JavaScript to execute a block of code repeatedly until a certain condition is met. They are an essential tool for iterating over arrays, objects, and other data structures."
+    },
+    {
+      "type": "funFact",
+      "text": "There are two main types of loops in JavaScript: the for loop and the while loop."
+    },
+    {
+      "type": "code",
+      "text": "Here's an example of a for loop in JavaScript:",
+      "code": "for (let i = 0; i < 5; i++) {\n console.log(i);\n}"
+    },
+    {
+      "type": "quiz",
+      "question": "What is the purpose of a loop in JavaScript?",
+      "options": [
+        "To execute a block of code repeatedly until a certain condition is met",
+        "To define a function in JavaScript",
+        "To assign a value to a variable in JavaScript",
+        "To create an object in JavaScript"
+      ],
+      "answer": "To execute a block of code repeatedly until a certain condition is met"
+    },
+    {
+      "type": "code",
+      "text": "Here's an example of a while loop in JavaScript:",
+      "code": "let i = 0;\nwhile (i < 5) {\n console.log(i);\n i++;\n}"
+    },
+    {
+      "type": "funFact",
+      "text": "In JavaScript, you can use the break and continue keywords to control the flow of a loop."
+    },
+    {
+      "type": "paragraph",
+      "text": "The break keyword allows you to immediately exit the loop and continue executing the next statement after the loop."
+    },
+    {
+      "type": "code",
+      "text": "Here's an example of using break in a loop in JavaScript:",
+      "code": "for (let i = 0; i < 5; i++) {\n if (i === 3) {\n break;\n }\n console.log(i);\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "The continue keyword allows you to skip the current iteration of a loop and move on to the next one."
+    },
+    {
+      "type": "code",
+      "text": "Here's an example of using continue in a loop in JavaScript:",
+      "code": "for (let i = 0; i < 5; i++) {\n if (i === 3) {\n continue;\n }\n console.log(i);\n}"
+    },
+    {
+      "type": "quiz",
+      "question": "What does the break keyword do in a loop?",
+      "options": [
+        "Exits the loop immediately",
+        "Skips the current iteration of the loop",
+        "Continues to the next iteration of the loop",
+        "None of the above"
+      ],
+      "answer": "Exits the loop immediately"
+    }
+  ]
+}

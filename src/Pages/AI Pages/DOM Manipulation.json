@@ -1,0 +1,69 @@
+{
+    "topic": "DOM Manipulation in JavaScript",
+    "content": [
+    {
+    "type": "paragraph",
+    "text": "The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. JavaScript can interact with the DOM to create dynamic HTML and CSS, respond to user interactions, and modify the page in real-time."
+    },
+    {
+    "type": "funFact",
+    "text": "The DOM is not part of the JavaScript language itself, but rather a separate specification that browsers implement. This means that there may be differences in how the DOM is implemented across different browsers."
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of how to get an element by its ID using JavaScript:",
+    "code": "const element = document.getElementById('myElement');"
+    },
+    {
+    "type": "quiz",
+    "question": "What does the DOM stand for?",
+    "options": [
+    "Document Object Model",
+    "Document Object Manipulation",
+    "Data Object Model",
+    "Data Object Manipulation"
+    ],
+    "answer": "Document Object Model"
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of how to change the text content of an element using JavaScript:",
+    "code": "const element = document.getElementById('myElement');\n element.textContent = 'Hello, world!';"
+    },
+    {
+    "type": "funFact",
+    "text": "In addition to getElementById, there are many other methods and properties for accessing and manipulating the DOM, such as querySelector, getElementsByClassName, and innerHTML."
+    },
+    {
+    "type": "quiz",
+    "question": "What is the difference between innerHTML and textContent?",
+    "options": [
+    "There is no difference",
+    "innerHTML is used to change the HTML content of an element, while textContent is used to change the text content of an element",
+    "textContent is used to change the HTML content of an element, while innerHTML is used to change the text content of an element",
+    "innerHTML and textContent are both used to change the text content of an element"
+    ],
+    "answer": "innerHTML is used to change the HTML content of an element, while textContent is used to change the text content of an element"
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of how to add an event listener to an element using JavaScript:",
+    "code": "const element = document.getElementById('myElement');\n element.addEventListener('click', function() {\n alert('Element clicked!');\n });"
+    },
+    {
+    "type": "funFact",
+    "text": "Event listeners allow JavaScript to respond to user interactions, such as clicks, mouse movements, and key presses."
+    },
+    {
+    "type": "quiz",
+    "question": "What is an event listener?",
+    "options": [
+    "A function that changes the text content of an element",
+    "A function that changes the HTML content of an element",
+    "A function that is called when a specific event occurs",
+    "A function that is called only once when the page loads"
+    ],
+    "answer": "A function that is called when a specific event occurs"
+    }
+    ]
+    }

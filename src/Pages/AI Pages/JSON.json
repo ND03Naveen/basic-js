@@ -1,0 +1,69 @@
+{
+    "topic": "JSON in JavaScript",
+    "content": [
+    {
+    "type": "paragraph",
+    "text": "JSON stands for JavaScript Object Notation. It is a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate. JSON is often used to transmit data between a server and a web application, as an alternative to XML."
+    },
+    {
+    "type": "funFact",
+    "text": "JSON syntax is a subset of the JavaScript object literal notation syntax. This means that a JavaScript object can be converted to JSON and vice versa."
+    },
+    {
+    "type": "code",
+    "text": "Here is an example of a JSON object:",
+    "code": "{\n \"name\": \"John\",\n \"age\": 30,\n \"city\": \"New York\"\n}"
+    },
+    {
+    "type": "quiz",
+    "question": "What is the difference between JSON and JavaScript objects?",
+    "options": [
+    "There is no difference",
+    "JSON objects can have functions as values",
+    "JavaScript objects can have functions as values",
+    "JSON objects are a subset of JavaScript objects"
+    ],
+    "answer": "JSON objects are a subset of JavaScript objects"
+    },
+    {
+    "type": "code",
+    "text": "Here is an example of how to parse a JSON string into a JavaScript object:",
+    "code": "const jsonString = '{\"name\":\"John\", \"age\":30, \"city\":\"New York\"}';\nconst obj = JSON.parse(jsonString);"
+    },
+    {
+    "type": "funFact",
+    "text": "The JSON format is often used for data exchange between server and client in AJAX applications, but it can also be used as a data storage format for NoSQL databases like MongoDB."
+    },    
+    {
+        "type": "code",
+        "text": "Here is an example of how to convert a JavaScript object to a JSON string:",
+        "code": "const obj = {\n name: \"John\",\n age: 30,\n city: \"New York\"\n};\nconst jsonString = JSON.stringify(obj);"
+        },
+    {
+    "type": "quiz",
+    "question": "What is the purpose of JSON.stringify()?",
+    "options": [
+    "To parse a JSON string into a JavaScript object",
+    "To convert a JavaScript object to a JSON string",
+    "To serialize a JavaScript function",
+    "To deserialize a JSON string"
+    ],
+    "answer": "To convert a JavaScript object to a JSON string"
+    },
+    {
+    "type": "funFact",
+    "text": "JSON has become a popular data interchange format because it is human-readable, easy to understand, and can be easily processed by a wide range of programming languages."
+    },
+    {
+    "type": "quiz",
+    "question": "What is the maximum depth of nested objects or arrays that can be encoded in JSON?",
+    "options": [
+    "100",
+    "50",
+    "20",
+    "There is no limit"
+    ],
+    "answer": "There is no limit"
+    }
+    ]
+    }

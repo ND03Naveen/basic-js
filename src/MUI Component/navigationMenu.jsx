@@ -3,9 +3,10 @@ import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { Link } from "react-router-dom";
 
 const options = [
-  'HOME','ABOUT','CONTACT'
+  {"name":"HOME","link":""},{"name":"About Us","link":"aboutUs"},{"name":"Contact Us","link":"contactUs"},{"name":"Terms of Service","link":"terms"},{"name":"Privacy Policy","link":"privacyPolicy"}
 ];
 
 const ITEM_HEIGHT = 48;
@@ -43,15 +44,17 @@ export default function LongMenu() {
         onClose={handleClose}
         PaperProps={{
           style: {
-            maxHeight: ITEM_HEIGHT * 4.5,
+            maxHeight: ITEM_HEIGHT * 5.5,
             width: '20ch',
           },
         }}
       >
-        {options.map((option) => (
-          <MenuItem key={option} selected={option === 'Pyxis'} onClick={handleClose}>
-            {option}
+        {options.map((option,index) => (
+          <Link key={option.name+index} to={option.link} style={{textDecoration:"none",color: "inherit"}}>
+          <MenuItem key={option.name+index} selected={option === 'Pyxis'} onClick={handleClose}>
+            {option.name}
           </MenuItem>
+          </Link>
         ))}
       </Menu>
     </div>

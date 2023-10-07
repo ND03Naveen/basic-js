@@ -1,0 +1,34 @@
+{
+    "topic": "ES6 Features in JavaScript",
+    "content": [
+        {
+            "type": "paragraph",
+            "text": "ES6 (ECMAScript 2015) introduced many new features and improvements to JavaScript, making it a more powerful and expressive language. Some of the key features of ES6 include arrow functions, let and const declarations, template literals, and classes."
+        },
+        {
+            "type": "funFact",
+            "text": "ES6 was the first major update to the language since 2009, when ECMAScript 5 (ES5) was released."
+        },
+        {
+            "type": "list",
+            "items": [
+                "Block-scoped variables: let and const keywords allow variables to be declared with block scope, meaning they are only accessible within the block they are defined in.",
+                "Arrow functions: Arrow functions are a shorthand way to write functions in JavaScript, with a simpler syntax than traditional function expressions.",
+                "Default parameters and rest parameters: Default parameters allow a function to have default values for its parameters, while rest parameters allow a function to accept an arbitrary number of arguments as an array.",
+                "Destructuring: Destructuring allows you to extract data from arrays or objects and assign them to variables in a more concise way.",
+                "Template literals: Template literals allow for more flexible string formatting with variables and expressions, and can span multiple lines.",
+                "Classes: Classes allow for more object-oriented programming in JavaScript, with class-based inheritance and constructor functions.",
+                "Enhanced object literals: Enhanced object literals allow for concise method definitions and computed property names.",
+                "Modules: Modules allow for better code organization and encapsulation, by allowing code to be split into separate files with clear dependencies.",
+                "Promises: Promises are a way to handle asynchronous code in JavaScript, allowing for cleaner and more maintainable code than traditional callbacks.",
+                "Generators: Generators allow for the creation of iterators and the handling of asynchronous code in a more readable and maintainable way.",
+                "Symbol: Symbol is a new primitive type in JavaScript that allows for the creation of unique object keys.",
+                "Sets and Maps: Sets and Maps are new data structures in JavaScript that allow for more efficient storage and retrieval of data."
+                ]
+        },
+        {
+            "type": "funFact",
+            "text": "Before ES6, the only way to declare a variable was with the 'var' keyword, which had some drawbacks in terms of scoping and hoisting."
+        }
+    ]
+}

@@ -1,0 +1,108 @@
+h1, h2 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-size: 32px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .linka {
+    color: #00bfa5;
+    text-decoration: none;
+  }
+  
+  .customul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .customli {
+    margin: 0 10px;
+  }
+  
+  /* Feedback section */
+  
+  #feedback {
+    background-color: #f2f2f2;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  /* Contact info section */
+  
+  #contact-info {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  #contact-info .linka {
+    display: block;
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  
+  /* Social media section */
+  
+  #social-media {
+    background-color: #f2f2f2;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  #social-media li {
+    margin: 0 10px;
+    font-size: 24px;
+  }
+  
+  #social-media li .linka {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  
+  #social-media li a.whatsapp-icon {
+    background-image: url("https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-whatsapp-circle-512.png");
+  }
+  
+  #social-media li a.instagram-icon {
+    background-image: url("https://cdn3.iconfinder.com/data/icons/picons-social/57/18-instagram-512.png");
+  }
+  
+  #social-media li a.facebook-icon {
+    background-image: url("https://cdn3.iconfinder.com/data/icons/picons-social/57/51-facebook-512.png");
+  }
+  
+  #social-media li a.twitter-icon {
+    background-image: url("https://cdn3.iconfinder.com/data/icons/picons-social/57/43-twitter-512.png");
+  }
+  
+  #social-media li a.linkedin-icon {
+    background-image: url("https://cdn3.iconfinder.com/data/icons/picons-social/57/14-linkedin-512.png");
+  }
+  
+  #social-media li a.discord-icon {
+    background-image: url("https://cdn4.iconfinder.com/data/icons/vector-brand-logos/40/Discord-512.png");
+  }

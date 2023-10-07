@@ -1,0 +1,49 @@
+{
+    "topic": "Web APIs in JavaScript",
+    "content": [
+    {
+    "type": "paragraph",
+    "text": "Web APIs (Application Programming Interfaces) are interfaces provided by web browsers that allow JavaScript to interact with the web page and its underlying web platform, including the Document Object Model (DOM), the network, and the browser itself."
+    },
+    {
+    "type": "funFact",
+    "text": "Web APIs are not part of the JavaScript language itself, but are instead provided by the browser environment in which JavaScript runs."
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of how to use the Web API to add an event listener to a button element:",
+    "code": "const button = document.querySelector('#myButton');\nbutton.addEventListener('click', () => {\n console.log('Button clicked!');\n});"
+    },
+    {
+    "type": "quiz",
+    "question": "What is the purpose of a Web API in JavaScript?",
+    "options": [
+    "To provide a way for JavaScript to interact with the browser environment and the web platform",
+    "To provide a way for JavaScript to interact with databases",
+    "To provide a way for JavaScript to interact with hardware devices",
+    "To provide a way for JavaScript to interact with other programming languages"
+    ],
+    "answer": "To provide a way for JavaScript to interact with the browser environment and the web platform"
+    },
+    {
+    "type": "code",
+    "text": "Here's an example of how to use the Web API to fetch data from an API endpoint:",
+    "code": "fetch('https://api.example.com/data')\n .then(response => response.json())\n .then(data => {\n console.log(data);\n});"
+    },
+    {
+    "type": "funFact",
+    "text": "Web APIs are constantly evolving, and new APIs are being added all the time. Some of the newer APIs include the Web Audio API, the Web Speech API, and the Web Bluetooth API."
+    },
+    {
+    "type": "quiz",
+    "question": "Which of the following is not a Web API in JavaScript?",
+    "options": [
+    "The Document Object Model (DOM) API",
+    "The Web Audio API",
+    "The Python API",
+    "The Web Storage API"
+    ],
+    "answer": "The Python API"
+    }
+    ]
+    }

@@ -1,0 +1,49 @@
+{
+    "topic": "AJAX in JavaScript",
+    "content": [
+    {
+    "type": "paragraph",
+    "text": "AJAX (Asynchronous JavaScript and XML) is a technique used in web development to send and receive data asynchronously between the client and server without reloading the entire page."
+    },
+    {
+    "type": "funFact",
+    "text": "Although the name suggests that XML is involved, AJAX can actually be used with any data format, including JSON, HTML, and plain text."
+    },
+    {
+    "type": "code",
+    "text": "Here is an example of making an AJAX request using the XMLHttpRequest object:",
+    "code": "const xhr = new XMLHttpRequest();\nxhr.open('GET', 'https://example.com/data');\nxhr.onload = function() {\n if (xhr.status === 200) {\n console.log(xhr.responseText);\n }\n};\nxhr.send();"
+    },
+    {
+    "type": "quiz",
+    "question": "What does AJAX stand for?",
+    "options": [
+    "Asynchronous JavaScript and XML",
+    "Advanced JavaScript and XML",
+    "Asynchronous JSON and XML",
+    "Advanced JSON and XML"
+    ],
+    "answer": "Asynchronous JavaScript and XML"
+    },
+    {
+    "type": "code",
+    "text": "Here is an example of making an AJAX request using the fetch API:",
+    "code": "fetch('https://example.com/data')\n .then(response => response.text())\n .then(data => console.log(data))\n .catch(error => console.error(error));"
+    },
+    {
+    "type": "funFact",
+    "text": "AJAX can be used to create single-page applications (SPAs), where the entire application runs in the browser without reloading the page."
+    },
+    {
+    "type": "quiz",
+    "question": "What is the difference between synchronous and asynchronous requests?",
+    "options": [
+    "Synchronous requests block the thread until the response is received, while asynchronous requests allow the thread to continue running while waiting for the response.",
+    "Synchronous requests are faster than asynchronous requests.",
+    "Asynchronous requests are used for GET requests, while synchronous requests are used for POST requests.",
+    "Synchronous requests are used for small data transfers, while asynchronous requests are used for large data transfers."
+    ],
+    "answer": "Synchronous requests block the thread until the response is received, while asynchronous requests allow the thread to continue running while waiting for the response."
+    }
+    ]
+    }

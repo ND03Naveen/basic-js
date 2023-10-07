@@ -1,0 +1,14 @@
+.navigationButton{
+    color: white !important;
+    background: #00bfa5 !important;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+}
+
+.navigationButton>svg{
+    font-size: 16px;
+}
+
+.disableButton{
+    background: lightgrey !important;
+}
